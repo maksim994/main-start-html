@@ -1,0 +1,36 @@
+.breadcrumbs {
+
+  // .breadcrumbs__item
+  &__item {
+    display: inline-block;
+    position: relative;
+    padding-right: 16px;
+    margin-right: -16px;
+    
+  }
+
+  // .breadcrumbs__link
+  &__link {
+    color: inherit;
+  }
+
+  // .breadcrumbs__item-name
+  &__item-name {
+  }
+
+  // .breadcrumbs__separator
+  &__separator {
+    position: relative;
+    zoom: 1;
+    bottom: -1px;
+    display: inline-block;
+    line-height: 18px;
+    margin: 0 10px 0 9px;
+    border: none;
+    color: #ddd;
+
+    @include media(lg){
+      margin: 0 4px 0 4px;
+    }
+  }
+}

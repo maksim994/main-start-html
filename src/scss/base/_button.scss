@@ -1,0 +1,191 @@
+.btn {
+  --button-bg: var(--brand-500, #0d6efd);
+  --button-color: var(--white, #FFF);
+  --button-hover-bg: var(--brand-400, #3d8bfd);
+  --button-hover-color: var(--white, #FFF);
+
+  --button-border-width: 1px;
+  --button-border-style: solid;
+  --button-border-color: var(--button-bg);
+  --button-radius: var(--m-border-radius, em(4));
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--button-gap, em(8));
+  padding: var(--button-padding, em(12) em(24));
+
+  background: var(--button-bg);
+  color: var(--button-color);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
+  border-radius: var(--button-radius);
+  text-decoration: none;
+  line-height: 1.1;
+
+  cursor: pointer;
+
+  &.btn-block{
+    width: 100%;
+    justify-content: center;
+  }
+
+  &:not(.btn-primary),
+  &:not(.btn-secondary){
+    --button-bg: transparent;
+    --button-color: var(--brand-500);
+    --button-border-color: transparent;
+
+    --button-hover-bg: transparent;
+    --button-hover-color: var(--brand-400);
+
+    &:hover {
+      --button-border-color: transparent;
+      --button-color: var(--brand-500);
+    }
+  }
+
+  .svg {
+    top: -1px;
+    height: var(--button-icon-size, 1.2cap);
+    width: auto;
+    flex: none;
+  }
+
+  &:focus {
+    outline-width: var(--button-outline-width, var(--button-border-width));
+    outline-style: var(--button-outline-style, var(--button-border-style));
+    outline-color: var(--button-outline-color, var(--button-border-color));
+    outline-offset: var(--button-outline-offset, calc(var(--button-border-width) * 2));
+  }
+
+  &:active {
+    transform: scale(99%);
+  }
+
+  &.btn.btn-icons{
+    padding: em(8);
+    color: inherit;
+
+    .svg{
+      height: em(16);
+    }
+
+    &:hover{
+      color: var(--brand-500);
+    }
+  }
+  
+  &.btn.btn-primary{
+    --button-bg: var(--brand-500);
+    --button-color: var(--white);
+    --button-border-color: var(--brand-500);
+
+    &:hover {
+      --button-bg: var(--brand-400);
+      --button-color: var(--white);
+      --button-border-color: var(--brand-400);
+
+      color: var(--button-color);
+    }
+
+    &:disabled {
+      --button-border-color: var(--gray-10);
+      --button-bg: var(--gray-10);
+      color: var(--gray-60);
+      cursor: not-allowed !important;
+    }
+
+  }
+
+  &.btn-secondary{
+    --button-bg: var(--white);
+    --button-border-color: var(--brand-500);
+    --button-color: var(--brand-500);
+
+    &:hover {
+      --button-bg: var(--white);
+      --button-border-color: var(--brand-400);
+      --button-color: var(--brand-400);
+    }
+
+    &:disabled {
+      --button-border-color: var(--gray-10);
+      --button-color: var(--gray-60);
+
+      color: var(--gray-60);
+      cursor: not-allowed !important;
+    }
+  }
+
+  &.btn-reset{
+    color: inherit;
+    --button-padding: 0;
+  }
+
+  // Размеры кнопок
+  &.btn-sm{
+    padding: var(--button-padding, em(8) em(16));
+    font-size: em(14);
+  }
+
+  &.btn-lg{
+    font-size: em(18);
+    padding: var(--button-padding, em(16) em(32));
+
+    svg{
+      --button-icon-size: 1.4cap;
+    }
+  }
+
+  // Вспомогательные кнопки
+  &.btn.btn-success{
+    --button-bg: var(--color-success, #6c757d);
+    --button-color: var(--white, #FFF);
+
+    &:hover{
+      color: var(--white, #FFF);
+      opacity: .8;
+    }
+  }
+
+  &.btn.btn-danger{
+    --button-bg: var(--color-danger, #dc3545);
+    --button-color: var(--white, #FFF);
+
+    &:hover{
+      color: var(--white, #FFF);
+      opacity: .8;
+    }
+  }
+
+  &.btn.btn-warning{
+    --button-bg: var(--color-warning, #ffc107);
+    --button-color: var(--black, #333);
+
+    &:hover{
+      color: var(--black, #333);
+      opacity: .8;
+    }
+  }
+
+  &.btn.btn-info{
+    --button-bg: var(--color-info, #0dcaf0);
+    --button-color: var(--black, #333);
+
+    &:hover{
+      color: var(--black, #333);
+      opacity: .8;
+    }
+  }
+
+  &.btn.btn-light{
+    --button-bg: var(--color-light, #f8f9fa);
+    --button-color: var(--black, #333);
+
+    &:hover{
+      color: var(--black, #333);
+      opacity: .8;
+    }
+  }
+}

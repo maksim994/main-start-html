@@ -1,0 +1,49 @@
+#more-nav {
+  display: flex;
+  position: relative;
+  z-index: 9;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#more-nav:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#more-nav > li {
+  display: block;
+  position: relative;
+  float: left;
+}
+#more-nav > li a {
+  white-space: nowrap;
+  display: flex;
+  height: 100%;
+}
+#more-nav > li > ul {
+  display: block;
+  position: absolute;
+  //   top: 100%;
+  //   right: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+}
+#more-nav > li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+#more-nav .more .header-more-second {
+  top: 100%;
+  left: auto;
+  right: 0;
+}
+
+#more-nav .more .has-child-more a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}

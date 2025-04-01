@@ -1,0 +1,205 @@
+@use "sass:math"; // You can use "sass:math"
+
+$vw-viewport: 1420;
+
+@function vw($font) {
+  $vw-context: $vw-viewport * 0.01 * 1px;
+  @return math.div($font, $vw-context) * 1vw;
+}
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.'
+  }
+}
+
+@function em($size, $base: 16) {
+  @return math.div($size, $base) + em;
+}
+
+
+
+
+@mixin font($size: 16px,  $line-height: 1.5px, $letter-spacing: 0, $weight: 400, $bottom: false) {
+  margin: 0;
+  font-weight: $weight;
+  font-size: $size;
+  font-family: var(--m-font-family-title);
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  user-select: text;
+
+  @if $bottom {
+    margin-bottom: $bottom;
+  }
+}
+
+@mixin color($name, $color) {
+  .bg-#{$name} {
+    background: $color !important;
+  }
+  .color-#{$name} {
+    color: $color !important;
+  }
+}
+
+@mixin media($Device) {
+  @media screen and (max-width: map-get($breakpoints, $Device) - 1px) {
+    @content;
+  }
+}
+
+@mixin z-index($key) {
+  z-index: map-get($z-index, $key);
+}
+
+@mixin sizes-classes($screen-name: "") {
+  @each $index, $size in $sizes {
+    .m#{$screen-name}-#{$index} {
+      margin: $size !important;
+    }
+    .mx#{$screen-name}-#{$index} {
+      margin-right: $size !important;
+      margin-left: $size !important;
+    }
+    .my#{$screen-name}-#{$index} {
+      margin-top: $size !important;
+      margin-bottom: $size !important;
+    }
+    .ml#{$screen-name}-#{$index} {
+      margin-left: $size !important;
+    }
+    .mr#{$screen-name}-#{$index} {
+      margin-right: $size !important;
+    }
+    .mt#{$screen-name}-#{$index} {
+      margin-top: $size !important;
+    }
+    .mb#{$screen-name}-#{$index} {
+      margin-bottom: $size !important;
+    }
+
+    .p#{$screen-name}-#{$index} {
+      padding: $size !important;
+    }
+    .px#{$screen-name}-#{$index} {
+      padding-right: $size !important;
+      padding-left: $size !important;
+    }
+    .py#{$screen-name}-#{$index} {
+      padding-top: $size !important;
+      padding-bottom: $size !important;
+    }
+    .pl#{$screen-name}-#{$index} {
+      padding-left: $size !important;
+    }
+    .pr#{$screen-name}-#{$index} {
+      padding-right: $size !important;
+    }
+    .pt#{$screen-name}-#{$index} {
+      padding-top: $size !important;
+    }
+    .pb#{$screen-name}-#{$index} {
+      padding-bottom: $size !important;
+    }
+  }
+}
+
+@mixin project-classes($screen-name: "") {
+  .d#{$screen-name}-n {
+    display: none !important;
+  }
+  .d#{$screen-name}-b {
+    display: block !important;
+  }
+  .d#{$screen-name}-f {
+    display: flex !important;
+  }
+  .fw#{$screen-name}-w {
+    flex-wrap: wrap !important;
+  }
+  .fw#{$screen-name}-n {
+    flex-wrap: nowrap !important;
+  }
+  .fd#{$screen-name}-c {
+    flex-direction: column !important;
+  }
+  .fd#{$screen-name}-r {
+    flex-direction: row !important;
+  }
+  .fb#{$screen-name}-100 {
+    flex-basis: 100% !important;
+  }
+  .ai#{$screen-name}-c {
+    align-items: center !important;
+  }
+  .ai#{$screen-name}-fs {
+    align-items: flex-start !important;
+  }
+  .ai#{$screen-name}-fe {
+    align-items: flex-end !important;
+  }
+  .as#{$screen-name}-fs {
+    align-self: flex-start !important;
+  }
+  .as#{$screen-name}-fe {
+    align-self: flex-end !important;
+  }
+  .as#{$screen-name}-c {
+    align-self: center !important;
+  }
+  .jc#{$screen-name}-fe {
+    justify-content: flex-end !important;
+  }
+  .jc#{$screen-name}-fs {
+    justify-content: flex-start !important;
+  }
+  .jc#{$screen-name}-c {
+    justify-content: center !important;
+  }
+  .jc#{$screen-name}-sb {
+    justify-content: space-between !important;
+  }
+  .bg#{$screen-name}-n {
+    background: none !important;
+  }
+  .br#{$screen-name}-n {
+    border: none !important;
+  }
+  .w-#{$screen-name}-100 {
+    width: 100% !important;
+  }
+  .h-#{$screen-name}-100 {
+    height: 100% !important;
+  }
+  .w-#{$screen-name}-50 {
+    width: 50% !important;
+  }
+  .h-#{$screen-name}-50 {
+    height: 50% !important;
+  }
+
+  .f-#{$screen-name}-l {
+    font-weight: 300;
+  }
+  .f-#{$screen-name}-r {
+    font-weight: 400;
+  }
+  .f-#{$screen-name}-m {
+    font-weight: 600;
+  }
+  .f-#{$screen-name}-b {
+    font-weight: 800;
+  }
+}
+
+// @include color('accent', var(--accent));
+// @include color('black', var(--black));
+// @include color('grey-80', var(--grey-80));
+// @include color('grey-60', var(--grey-60));
+// @include color('grey-40', var(--grey-40));
+// @include color('grey-20', var(--grey-20));
+
+@include project-classes;

@@ -1,0 +1,122 @@
+@mixin flex-classes-media($screen-name: "") {
+  .d-#{$screen-name}-n {
+    display: none !important;
+  }
+  .d-#{$screen-name}-b {
+    display: block !important;
+  }
+  .d-#{$screen-name}-f {
+    display: flex !important;
+  }
+  .fw-#{$screen-name}-w {
+    flex-wrap: wrap !important;
+  }
+  .fw-#{$screen-name}-n {
+    flex-wrap: nowrap !important;
+  }
+  .fd-#{$screen-name}-c {
+    flex-direction: column !important;
+  }
+  .fd-#{$screen-name}-r {
+    flex-direction: row !important;
+  }
+  .fb-#{$screen-name}-100 {
+    flex-basis: 100% !important;
+  }
+  .ai-#{$screen-name}-c {
+    align-items: center !important;
+  }
+  .ai-#{$screen-name}-fs {
+    align-items: flex-start !important;
+  }
+  .ai-#{$screen-name}-fe {
+    align-items: flex-end !important;
+  }
+  .as-#{$screen-name}-fs {
+    align-self: flex-start !important;
+  }
+  .as-#{$screen-name}-fe {
+    align-self: flex-end !important;
+  }
+  .as-#{$screen-name}-c {
+    align-self: center !important;
+  }
+  .jc-#{$screen-name}-fe {
+    justify-content: flex-end !important;
+  }
+  .jc-#{$screen-name}-fs {
+    justify-content: flex-start !important;
+  }
+  .jc-#{$screen-name}-c {
+    justify-content: center !important;
+  }
+  .jc-#{$screen-name}-sb {
+    justify-content: space-between !important;
+  }
+}
+
+@mixin flex-classes() {
+  .d-n {
+    display: none !important;
+  }
+  .d-b {
+    display: block !important;
+  }
+  .d-f {
+    display: flex !important;
+  }
+  .fw-w {
+    flex-wrap: wrap !important;
+  }
+  .fw-n {
+    flex-wrap: nowrap !important;
+  }
+  .fd-c {
+    flex-direction: column !important;
+  }
+  .fd-r {
+    flex-direction: row !important;
+  }
+  .fb-100 {
+    flex-basis: 100% !important;
+  }
+  .ai-c {
+    align-items: center !important;
+  }
+  .ai-fs {
+    align-items: flex-start !important;
+  }
+  .ai-fe {
+    align-items: flex-end !important;
+  }
+  .as-fs {
+    align-self: flex-start !important;
+  }
+  .as-fe {
+    align-self: flex-end !important;
+  }
+  .as-c {
+    align-self: center !important;
+  }
+  .jc-fe {
+    justify-content: flex-end !important;
+  }
+  .jc-fs {
+    justify-content: flex-start !important;
+  }
+  .jc-c {
+    justify-content: center !important;
+  }
+  .jc-sb {
+    justify-content: space-between !important;
+  }
+}
+
+@include flex-classes();
+
+@each $breakpoint, $value in $breakpoints
+{
+  @media (max-width: $value) {
+    @include flex-classes-media($breakpoint);
+  }
+}

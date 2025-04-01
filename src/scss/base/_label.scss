@@ -1,0 +1,63 @@
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background: #999;
+
+  a{
+    color: inherit;
+  }
+
+  &.label-default {
+    background-color: #999;
+  }
+
+  &.label-primary {
+    background-color: #ccc;
+  }
+
+  &.label-success {
+    background-color: #5cb85c;
+  }
+
+  &.label-info {
+    background-color: #365edc;
+  }
+
+  &.label-warning {
+    background-color: #f0ad4e;
+  }
+
+  &.label-danger {
+    background-color: #d9534f;
+  }
+
+  &.label-hit {
+    background-color: #ed673c;
+  }
+
+  &.label-recommend {
+    background-color: #925aec;
+  }
+
+  &.label-new{
+    background-color: #31b82f;
+  }
+
+}
+
+// .element-count
+.element-count{
+  display: inline-block;
+  border: 1px solid var(--gray-10);
+  color: var(--gray-60);
+  padding: 4px 6px;
+  font-size: 14px;
+  border-radius: var(--m-border-radius);
+}

@@ -1,0 +1,61 @@
+.fancybox__content{
+  background: var(--white);
+}
+
+.modal {
+  max-width: 100%;
+  padding: 30px 40px;
+  border-radius: var(--m-border-radius);
+
+  // .modal_extra-small
+  &_extra-small {
+    width: 445px;
+  }
+
+  // .modal_small
+  &_small {
+    width: 600px;
+  }
+
+  // .modal_medium
+  &_medium {
+    width: 900px;
+  }
+
+  // .modal_large
+  &_large {
+    width: 900px;
+  }
+
+  // .modal__header
+  &__header {
+    margin-bottom: 12px;
+  }
+
+  // .modal__footer
+  &__footer {
+    margin-top: 12px;
+  }
+
+  &.fancybox__content {
+    .f-button.is-close-btn {
+      top: 4px;
+      right: 4px;
+
+      --f-button-border-radius: 0;
+      --f-button-color: var(--grey-60);
+      --f-button-active-bg: transparent;
+      --f-button-hover-bg: transparent;
+      --f-button-bg: transparent;
+    }
+  }
+
+}
+
+.is-compact .fancybox__content > .f-button.is-close-btn {
+  --f-button-color: #000000;
+  --f-button-hover-color: #000000;
+  --f-button-bg: transparent;
+  --f-button-active-bg: transparent;
+  --f-button-hover-bg: transparent;
+}

@@ -1,0 +1,76 @@
+@each $size, $value in $sizes {
+    .mt-#{$size} {
+      margin-top: $value;
+    }
+
+    .mb-#{$size} {
+      margin-bottom: $value;
+    }
+
+    .ml-#{$size} {
+      margin-left: $value;
+    }
+
+    .mr-#{$size} {
+      margin-right: $value;
+    }
+
+    .pt-#{$size} {
+      padding-top: $value;
+    }
+
+    .pb-#{$size} {
+      padding-bottom: $value;
+    }
+
+    .pl-#{$size} {
+      padding-left: $value;
+    }
+
+    .pr-#{$size} {
+      padding-right: $value;
+    }
+}
+@each $breakpoint, $value in $breakpoints {
+  @each $size, $value in $sizes {
+    .mt-#{$breakpoint}-#{$size} {
+      margin-top: $value;
+    }
+
+    .mb-#{$breakpoint}-#{$size} {
+      margin-bottom: $value;
+    }
+
+    .ml-#{$breakpoint}-#{$size} {
+      margin-left: $value;
+    }
+
+    .mr-#{$breakpoint}-#{$size} {
+      margin-right: $value;
+    }
+
+    .pt-#{$breakpoint}-#{$size} {
+      padding-top: $value;
+    }
+
+    .pb-#{$breakpoint}-#{$size} {
+      padding-bottom: $value;
+    }
+
+    .pl-#{$breakpoint}-#{$size} {
+      padding-left: $value;
+    }
+
+    .pr-#{$breakpoint}-#{$size} {
+      padding-right: $value;
+    }
+  }
+}
+
+.gap-4{ gap: 4px; }
+.gap-8{ gap: 8px; }
+.gap-10{ gap: 10px; }
+.gap-12{ gap: 12px; }
+.gap-14{ gap: 14px; }
+.gap-16{ gap: 16px; }
+.gap{ gap: var(--m-gap); }

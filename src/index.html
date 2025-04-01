@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "Список страниц"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+  <div class="wrapper">
+    <ol class="pages">
+      <li><a href="/home.html">Главная страница</a></li>
+
+      <li><a href="/more-btn.html">Возможность - Кнопки <sup class="update">UP</sup></a></li>
+      <li><a href="/more-elements.html">Возможность - Элементы <sup class="update">UP</sup></a></li>
+      <li><a href="/more-typograpy.html">Возможность - Типографика</a></li>
+    </ol>
+  </div>
+</main>
+
+@include('partials/component/footer.html')
+
+<style>
+  .update{
+    background-color: var(--brand-500);
+    color: var(--white);
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .pages li:not(:last-child){
+    margin-bottom: .5em;
+  }
+</style>
+</body>
+</html>

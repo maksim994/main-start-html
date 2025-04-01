@@ -1,0 +1,721 @@
+<div class="smart-filter bx-filter">
+  <div class="smart-filter-section">
+
+    <div class="smart-filter-title fs-18 switcher-title mb-20">Подбор параметров </div>
+
+    <div class="smart-filter-body">
+      <form name="arrFilter_form" action="#" method="get" class="smart-filter-form">
+
+        <input type="hidden" name="clear_cache" id="clear_cache" value="Y" />
+
+
+
+        <div class="smart-filter-parameters-box  bx-active">
+          <div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+            <span class="smart-filter-container-modef"></span>
+
+            <span class="smart-filter-parameters-box-title-text">Цена</span>
+
+            <span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-up">
+							<span class="smart-filter-angles"></span>
+						</span>
+
+          </div>
+
+          <div class="smart-filter-block" data-role="bx_filter_block">
+            <div class="smart-filter-parameters-box-container">
+              <div class="smart-filter-input-group-number">
+                <div class="smart-filter-input-group-number-wrapper d-f ai-c gap">
+                  <input class="min-price" type="number" name="arrFilter_545_MIN"
+                         id="arrFilter_545_MIN" value="" placeholder="От"
+                         onkeyup="smartFilter.keyup(this)" />
+
+                  <input class="max-price" type="number" name="arrFilter_545_MAX"
+                         id="arrFilter_545_MAX" value="" placeholder="До"
+                         onkeyup="smartFilter.keyup(this)" />
+                </div>
+
+                <div class="smart-filter-slider-track-container">
+                  <div class="smart-filter-slider-track" id="drag_track_545">
+                    <div class="smart-filter-slider-ruler p1"><span>1500</span></div>
+                    <div class="smart-filter-slider-ruler p2"><span>5625</span></div>
+                    <div class="smart-filter-slider-ruler p3"><span>9750</span></div>
+                    <div class="smart-filter-slider-ruler p4"><span>13875</span></div>
+                    <div class="smart-filter-slider-ruler p5"><span>18000</span></div>
+
+                    <div class="smart-filter-slider-price-bar-vd" style="left: 0;right: 0;"
+                         id="colorUnavailableActive_545"></div>
+                    <div class="smart-filter-slider-price-bar-vn" style="left: 0;right: 0;"
+                         id="colorAvailableInactive_545"></div>
+                    <div class="smart-filter-slider-price-bar-v" style="left: 0;right: 0;"
+                         id="colorAvailableActive_545"></div>
+                    <div class="smart-filter-slider-range" id="drag_tracker_545"
+                         style="left: 0;right: 0;">
+                      <a class="smart-filter-slider-handle left" style="left:0;"
+                         href="javascript:void(0)" id="left_slider_545"></a>
+                      <a class="smart-filter-slider-handle right" style="right:0;"
+                         href="javascript:void(0)" id="right_slider_545"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                BX.ready(function () {
+                  window['trackBar545'] = new BX.Iblock.SmartFilter({
+                    'leftSlider': 'left_slider_545',
+                    'rightSlider': 'right_slider_545',
+                    'tracker': 'drag_tracker_545',
+                    'trackerWrap': 'drag_track_545',
+                    'minInputId': 'arrFilter_545_MIN',
+                    'maxInputId': 'arrFilter_545_MAX',
+                    'minPrice': '1500',
+                    'maxPrice': '18000',
+                    'curMinPrice': '',
+                    'curMaxPrice': '',
+                    'fltMinPrice': '1750',
+                    'fltMaxPrice': '1750',
+                    'precision': '0',
+                    'colorUnavailableActive': 'colorUnavailableActive_545',
+                    'colorAvailableActive': 'colorAvailableActive_545',
+                    'colorAvailableInactive': 'colorAvailableInactive_545'
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <div class="smart-filter-parameters-box ">
+          <div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+            <span class="smart-filter-container-modef"></span>
+
+            <span class="smart-filter-parameters-box-title-text">Хит продаж</span>
+
+            <span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-down">
+							<span class="smart-filter-angles"></span>
+						</span>
+
+          </div>
+
+          <div class="smart-filter-block" data-role="bx_filter_block">
+            <div class="smart-filter-parameters-box-container">
+              <div class="smart-filter-input-group-checkbox-list">
+                <div class="form-group form-check mb-1">
+                  <input type="checkbox" value="Y" name="arrFilter_563_3472745896"
+                         id="arrFilter_563_3472745896" class="form-check-input"
+                         onclick="smartFilter.click(this)" />
+                  <label data-role="label_arrFilter_563_3472745896"
+                         class="smart-filter-checkbox-text form-check-label"
+                         for="arrFilter_563_3472745896">
+                    Новинка&nbsp;(<span data-role="count_arrFilter_563_3472745896">1</span>)
+                  </label>
+                </div>
+                <div class="form-group form-check mb-1">
+                  <input type="checkbox" value="Y" name="arrFilter_563_3120223550"
+                         id="arrFilter_563_3120223550" class="form-check-input" disabled
+                         onclick="smartFilter.click(this)" />
+                  <label data-role="label_arrFilter_563_3120223550"
+                         class="smart-filter-checkbox-text form-check-label"
+                         for="arrFilter_563_3120223550">
+                    Рекомендуем&nbsp;(<span data-role="count_arrFilter_563_3120223550">0</span>)
+                  </label>
+                </div>
+                <div class="form-group form-check mb-1">
+                  <input type="checkbox" value="Y" name="arrFilter_563_1475654674"
+                         id="arrFilter_563_1475654674" class="form-check-input" disabled
+                         onclick="smartFilter.click(this)" />
+                  <label data-role="label_arrFilter_563_1475654674"
+                         class="smart-filter-checkbox-text form-check-label"
+                         for="arrFilter_563_1475654674">
+                    Хит&nbsp;(<span data-role="count_arrFilter_563_1475654674">0</span>) </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="smart-filter-parameters-box ">
+          <div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+            <span class="smart-filter-container-modef"></span>
+
+            <span class="smart-filter-parameters-box-title-text">Производитель</span>
+
+            <span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-down">
+							<span class="smart-filter-angles"></span>
+						</span>
+
+            <span class="smart-filter-hint">
+							<span class="smart-filter-hint-icon">?</span>
+							<span class="smart-filter-hint-popup">
+								<span class="smart-filter-hint-popup-angle"></span>
+								<span class="smart-filter-hint-popup-content">
+
+								</span> Пример подсказки.<br>
+								Может быть <i>многострочной</i> и содержать <a href="http://aspro.ru"
+                                                                               target="_blank">ссылку</a></span>
+						</span>
+          </div>
+
+          <div class="smart-filter-block" data-role="bx_filter_block">
+            <div class="smart-filter-parameters-box-container">
+              <div class="smart-filter-input-group-checkbox-list">
+                <div class="form-group form-check mb-1">
+                  <input type="checkbox" value="Y" name="arrFilter_577_3339318549"
+                         id="arrFilter_577_3339318549" class="form-check-input"
+                         onclick="smartFilter.click(this)" />
+                  <label data-role="label_arrFilter_577_3339318549"
+                         class="smart-filter-checkbox-text form-check-label"
+                         for="arrFilter_577_3339318549">
+                    Lindros&nbsp;(<span data-role="count_arrFilter_577_3339318549">1</span>)
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="smart-filter-parameters-box  bx-active">
+          <div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+            <span class="smart-filter-container-modef"></span>
+
+            <span class="smart-filter-parameters-box-title-text">Грузоподъемность, тонн</span>
+
+            <span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-up">
+							<span class="smart-filter-angles"></span>
+						</span>
+
+            <span class="smart-filter-hint">
+							<span class="smart-filter-hint-icon">?</span>
+							<span class="smart-filter-hint-popup">
+								<span class="smart-filter-hint-popup-angle"></span>
+								<span class="smart-filter-hint-popup-content">
+
+								</span> Подсказка в умном фильтре для посетителей</span>
+						</span>
+          </div>
+
+          <div class="smart-filter-block" data-role="bx_filter_block">
+            <div class="smart-filter-parameters-box-container">
+              <div class="smart-filter-input-group-number">
+                <div class="smart-filter-input-group-number-wrapper d-f ai-c gap">
+                  <input class="min-price" type="number" name="arrFilter_604_MIN"
+                         id="arrFilter_604_MIN" value="" placeholder="От"
+                         onkeyup="smartFilter.keyup(this)" />
+
+                  <input class="max-price" type="number" name="arrFilter_604_MAX"
+                         id="arrFilter_604_MAX" value="" placeholder="До"
+                         onkeyup="smartFilter.keyup(this)" />
+                </div>
+
+                <div class="smart-filter-slider-track-container">
+                  <div class="smart-filter-slider-track" id="drag_track_604">
+                    <div class="smart-filter-slider-ruler p1"><span>8</span></div>
+                    <div class="smart-filter-slider-ruler p2"><span>26</span></div>
+                    <div class="smart-filter-slider-ruler p3"><span>44</span></div>
+                    <div class="smart-filter-slider-ruler p4"><span>62</span></div>
+                    <div class="smart-filter-slider-ruler p5"><span>80</span></div>
+
+                    <div class="smart-filter-slider-price-bar-vd" style="left: 0;right: 0;"
+                         id="colorUnavailableActive_604"></div>
+                    <div class="smart-filter-slider-price-bar-vn" style="left: 0;right: 0;"
+                         id="colorAvailableInactive_604"></div>
+                    <div class="smart-filter-slider-price-bar-v" style="left: 0;right: 0;"
+                         id="colorAvailableActive_604"></div>
+                    <div class="smart-filter-slider-range" id="drag_tracker_604"
+                         style="left: 0;right: 0;">
+                      <a class="smart-filter-slider-handle left" style="left:0;"
+                         href="javascript:void(0)" id="left_slider_604"></a>
+                      <a class="smart-filter-slider-handle right" style="right:0;"
+                         href="javascript:void(0)" id="right_slider_604"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                BX.ready(function () {
+                  window['trackBar604'] = new BX.Iblock.SmartFilter({
+                    'leftSlider': 'left_slider_604',
+                    'rightSlider': 'right_slider_604',
+                    'tracker': 'drag_tracker_604',
+                    'trackerWrap': 'drag_track_604',
+                    'minInputId': 'arrFilter_604_MIN',
+                    'maxInputId': 'arrFilter_604_MAX',
+                    'minPrice': '8',
+                    'maxPrice': '80',
+                    'curMinPrice': '',
+                    'curMaxPrice': '',
+                    'fltMinPrice': '8',
+                    'fltMaxPrice': '80',
+                    'precision': '0',
+                    'colorUnavailableActive': 'colorUnavailableActive_604',
+                    'colorAvailableActive': 'colorAvailableActive_604',
+                    'colorAvailableInactive': 'colorAvailableInactive_604'
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <div class="smart-filter-parameters-box  bx-active">
+          <div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+            <span class="smart-filter-container-modef"></span>
+
+            <span class="smart-filter-parameters-box-title-text">Длина стрелы, м</span>
+
+            <span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-up">
+							<span class="smart-filter-angles"></span>
+						</span>
+
+          </div>
+
+          <div class="smart-filter-block" data-role="bx_filter_block">
+            <div class="smart-filter-parameters-box-container">
+              <div class="smart-filter-input-group-number">
+                <div class="smart-filter-input-group-number-wrapper d-f ai-c gap">
+                  <input class="min-price" type="number" name="arrFilter_605_MIN"
+                         id="arrFilter_605_MIN" value="" placeholder="От"
+                         onkeyup="smartFilter.keyup(this)" />
+
+                  <input class="max-price" type="number" name="arrFilter_605_MAX"
+                         id="arrFilter_605_MAX" value="" placeholder="До"
+                         onkeyup="smartFilter.keyup(this)" />
+                </div>
+
+                <div class="smart-filter-slider-track-container">
+                  <div class="smart-filter-slider-track" id="drag_track_605">
+                    <div class="smart-filter-slider-ruler p1"><span>9</span></div>
+                    <div class="smart-filter-slider-ruler p2"><span>13</span></div>
+                    <div class="smart-filter-slider-ruler p3"><span>16</span></div>
+                    <div class="smart-filter-slider-ruler p4"><span>20</span></div>
+                    <div class="smart-filter-slider-ruler p5"><span>23</span></div>
+
+                    <div class="smart-filter-slider-price-bar-vd" style="left: 0;right: 0;"
+                         id="colorUnavailableActive_605"></div>
+                    <div class="smart-filter-slider-price-bar-vn" style="left: 0;right: 0;"
+                         id="colorAvailableInactive_605"></div>
+                    <div class="smart-filter-slider-price-bar-v" style="left: 0;right: 0;"
+                         id="colorAvailableActive_605"></div>
+                    <div class="smart-filter-slider-range" id="drag_tracker_605"
+                         style="left: 0;right: 0;">
+                      <a class="smart-filter-slider-handle left" style="left:0;"
+                         href="javascript:void(0)" id="left_slider_605"></a>
+                      <a class="smart-filter-slider-handle right" style="right:0;"
+                         href="javascript:void(0)" id="right_slider_605"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                BX.ready(function () {
+                  window['trackBar605'] = new BX.Iblock.SmartFilter({
+                    'leftSlider': 'left_slider_605',
+                    'rightSlider': 'right_slider_605',
+                    'tracker': 'drag_tracker_605',
+                    'trackerWrap': 'drag_track_605',
+                    'minInputId': 'arrFilter_605_MIN',
+                    'maxInputId': 'arrFilter_605_MAX',
+                    'minPrice': '9',
+                    'maxPrice': '23',
+                    'curMinPrice': '',
+                    'curMaxPrice': '',
+                    'fltMinPrice': '9',
+                    'fltMaxPrice': '23',
+                    'precision': '0',
+                    'colorUnavailableActive': 'colorUnavailableActive_605',
+                    'colorAvailableActive': 'colorAvailableActive_605',
+                    'colorAvailableInactive': 'colorAvailableInactive_605'
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <div class="smart-filter-parameters-box  bx-active">
+          <div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+            <span class="smart-filter-container-modef"></span>
+
+            <span class="smart-filter-parameters-box-title-text">Мощность, л.с.</span>
+
+            <span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-up">
+							<span class="smart-filter-angles"></span>
+						</span>
+
+          </div>
+
+          <div class="smart-filter-block" data-role="bx_filter_block">
+            <div class="smart-filter-parameters-box-container">
+              <div class="smart-filter-input-group-number">
+                <div class="smart-filter-input-group-number-wrapper d-f ai-c gap">
+                  <input class="min-price" type="number" name="arrFilter_611_MIN"
+                         id="arrFilter_611_MIN" value="" placeholder="От"
+                         onkeyup="smartFilter.keyup(this)" />
+
+                  <input class="max-price" type="number" name="arrFilter_611_MAX"
+                         id="arrFilter_611_MAX" value="" placeholder="До"
+                         onkeyup="smartFilter.keyup(this)" />
+                </div>
+
+                <div class="smart-filter-slider-track-container">
+                  <div class="smart-filter-slider-track" id="drag_track_611">
+                    <div class="smart-filter-slider-ruler p1"><span>145</span></div>
+                    <div class="smart-filter-slider-ruler p2"><span>204</span></div>
+                    <div class="smart-filter-slider-ruler p3"><span>263</span></div>
+                    <div class="smart-filter-slider-ruler p4"><span>321</span></div>
+                    <div class="smart-filter-slider-ruler p5"><span>380</span></div>
+
+                    <div class="smart-filter-slider-price-bar-vd" style="left: 0;right: 0;"
+                         id="colorUnavailableActive_611"></div>
+                    <div class="smart-filter-slider-price-bar-vn" style="left: 0;right: 0;"
+                         id="colorAvailableInactive_611"></div>
+                    <div class="smart-filter-slider-price-bar-v" style="left: 0;right: 0;"
+                         id="colorAvailableActive_611"></div>
+                    <div class="smart-filter-slider-range" id="drag_tracker_611"
+                         style="left: 0;right: 0;">
+                      <a class="smart-filter-slider-handle left" style="left:0;"
+                         href="javascript:void(0)" id="left_slider_611"></a>
+                      <a class="smart-filter-slider-handle right" style="right:0;"
+                         href="javascript:void(0)" id="right_slider_611"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                BX.ready(function () {
+                  window['trackBar611'] = new BX.Iblock.SmartFilter({
+                    'leftSlider': 'left_slider_611',
+                    'rightSlider': 'right_slider_611',
+                    'tracker': 'drag_tracker_611',
+                    'trackerWrap': 'drag_track_611',
+                    'minInputId': 'arrFilter_611_MIN',
+                    'maxInputId': 'arrFilter_611_MAX',
+                    'minPrice': '145',
+                    'maxPrice': '380',
+                    'curMinPrice': '',
+                    'curMaxPrice': '',
+                    'fltMinPrice': '177',
+                    'fltMaxPrice': '177',
+                    'precision': '0',
+                    'colorUnavailableActive': 'colorUnavailableActive_611',
+                    'colorAvailableActive': 'colorAvailableActive_611',
+                    'colorAvailableInactive': 'colorAvailableInactive_611'
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <div class="smart-filter-parameters-box  bx-active">
+          <div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+            <span class="smart-filter-container-modef"></span>
+
+            <span class="smart-filter-parameters-box-title-text">Объем ковша, м3</span>
+
+            <span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-up">
+							<span class="smart-filter-angles"></span>
+						</span>
+
+          </div>
+
+          <div class="smart-filter-block" data-role="bx_filter_block">
+            <div class="smart-filter-parameters-box-container">
+              <div class="col">
+                <div class="radio">
+                  <label class="smart-filter-param-label" for="all_arrFilter_612_1573598778">
+										<span class="smart-filter-input-checkbox">
+											<input type="radio" value="" name="arrFilter_612"
+                                                   id="all_arrFilter_612_1573598778" onclick="smartFilter.click(this)" />
+											<span class="smart-filter-param-text">Все</span>
+										</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label data-role="label_arrFilter_612_1573598778" class="smart-filter-param-label"
+                         for="arrFilter_612_1573598778">
+										<span class="smart-filter-input-checkbox disabled">
+											<input type="radio" value="1573598778" name="arrFilter_612"
+                                                   id="arrFilter_612_1573598778" onclick="smartFilter.click(this)" />
+											<span class="smart-filter-param-text" title="0,3">0,3&nbsp;(<span
+                                                    data-role="count_arrFilter_612_1573598778">0</span>)</span>
+										</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label data-role="label_arrFilter_612_3390697394" class="smart-filter-param-label"
+                         for="arrFilter_612_3390697394">
+										<span class="smart-filter-input-checkbox ">
+											<input type="radio" value="3390697394" name="arrFilter_612"
+                                                   id="arrFilter_612_3390697394" onclick="smartFilter.click(this)" />
+											<span class="smart-filter-param-text" title="0,8">0,8&nbsp;(<span
+                                                    data-role="count_arrFilter_612_3390697394">1</span>)</span>
+										</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label data-role="label_arrFilter_612_1544117261" class="smart-filter-param-label"
+                         for="arrFilter_612_1544117261">
+										<span class="smart-filter-input-checkbox disabled">
+											<input type="radio" value="1544117261" name="arrFilter_612"
+                                                   id="arrFilter_612_1544117261" onclick="smartFilter.click(this)" />
+											<span class="smart-filter-param-text" title="1,3">1,3&nbsp;(<span
+                                                    data-role="count_arrFilter_612_1544117261">0</span>)</span>
+										</span>
+                  </label>
+                </div>
+              </div>
+              <div class="w-100"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="smart-filter-parameters-box  bx-active">
+          <div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+            <span class="smart-filter-container-modef"></span>
+
+            <span class="smart-filter-parameters-box-title-text">Глубина копания, м</span>
+
+            <span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-up">
+							<span class="smart-filter-angles"></span>
+						</span>
+
+          </div>
+
+          <div class="smart-filter-block" data-role="bx_filter_block">
+            <div class="smart-filter-parameters-box-container">
+              <div class="smart-filter-input-group-dropdown">
+                <div class="smart-filter-dropdown-block"
+                     onclick="smartFilter.showDropDownPopup(this, '613')">
+                  <div class="smart-filter-dropdown-text" data-role="currentOption">
+                    6,5 </div>
+                  <div class="smart-filter-dropdown-arrow"></div>
+                  <input style="display: none" type="radio" name="arrFilter_613"
+                         id="all_arrFilter_613_2992853476" value="" />
+                  <input style="display: none" type="radio" name="arrFilter_613"
+                         id="arrFilter_613_2992853476" value="2992853476" />
+                  <input style="display: none" type="radio" name="arrFilter_613"
+                         id="arrFilter_613_2955276221" value="2955276221" checked="checked" />
+                  <input style="display: none" type="radio" name="arrFilter_613"
+                         id="arrFilter_613_3062514067" value="3062514067" />
+
+                  <div class="smart-filter-dropdown-popup" data-role="dropdownContent"
+                       style="display: none;">
+                    <ul>
+                      <li>
+                        <label for="all_arrFilter_613_2992853476"
+                               class="smart-filter-dropdown-label"
+                               data-role="label_all_arrFilter_613_2992853476"
+                               onclick="smartFilter.selectDropDownItem(this, 'all_arrFilter_613_2992853476')">
+                          Все </label>
+                      </li>
+                      <li>
+                        <label for="arrFilter_613_2992853476"
+                               class="smart-filter-dropdown-label"
+                               data-role="label_arrFilter_613_2992853476"
+                               onclick="smartFilter.selectDropDownItem(this, 'arrFilter_613_2992853476')">
+                          5,5 </label>
+                      </li>
+                      <li>
+                        <label for="arrFilter_613_2955276221"
+                               class="smart-filter-dropdown-label selected"
+                               data-role="label_arrFilter_613_2955276221"
+                               onclick="smartFilter.selectDropDownItem(this, 'arrFilter_613_2955276221')">
+                          6,5 </label>
+                      </li>
+                      <li>
+                        <label for="arrFilter_613_3062514067"
+                               class="smart-filter-dropdown-label"
+                               data-role="label_arrFilter_613_3062514067"
+                               onclick="smartFilter.selectDropDownItem(this, 'arrFilter_613_3062514067')">
+                          7,1 </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="smart-filter-parameters-box  bx-active">
+          <div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+            <span class="smart-filter-container-modef"></span>
+
+            <span class="smart-filter-parameters-box-title-text">Страна производства</span>
+
+            <span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-up">
+							<span class="smart-filter-angles"></span>
+						</span>
+
+          </div>
+
+          <div class="smart-filter-block" data-role="bx_filter_block">
+            <div class="smart-filter-parameters-box-container">
+              <div class="col">
+                <div class="radio">
+                  <label class="smart-filter-param-label" for="all_arrFilter_621_2964086847">
+										<span class="smart-filter-input-checkbox">
+											<input type="radio" value="" name="arrFilter_621"
+                                                   id="all_arrFilter_621_2964086847" onclick="smartFilter.click(this)" />
+											<span class="smart-filter-param-text">Все</span>
+										</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label data-role="label_arrFilter_621_2964086847" class="smart-filter-param-label"
+                         for="arrFilter_621_2964086847">
+										<span class="smart-filter-input-checkbox disabled">
+											<input type="radio" value="2964086847" name="arrFilter_621"
+                                                   id="arrFilter_621_2964086847" onclick="smartFilter.click(this)" />
+											<span class="smart-filter-param-text" title="Россия">Россия&nbsp;(<span
+                                                    data-role="count_arrFilter_621_2964086847">0</span>)</span>
+										</span>
+                  </label>
+                </div>
+              </div>
+              <div class="w-100"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="smart-filter-footer">
+      <div class="smart-filter-btn-group">
+        <input class="btn btn-primary" type="submit" id="set_filter" name="set_filter" value="Показать" />
+        <input class="btn" type="submit" id="del_filter" name="del_filter" value="Сбросить" />
+      </div>
+
+      <div class="col smart-filter-button-box">
+        <div class="smart-filter-block">
+          <div class="smart-filter-parameters-box-container">
+
+
+            <div class="smart-filter-popup-result left" id="modef" style="display:none"
+                 style="display: inline-block;">
+              Выбрано: <span id="modef_num">0</span> <span class="arrow"></span>
+              <br />
+              <a href="/product/arenda-tekhniki/filter/corp_depth-is-6%2C5/apply/" target="">Показать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+
+  </div>
+</div>
+
+<!--<div class="smart-filter">-->
+
+<!--  <div class="smart-filter-top">-->
+<!--    <div class="smart-filter&#45;&#45;title title-h5">Фильтр</div>-->
+<!--  </div>-->
+<!--  <div class="smart-filter-center">-->
+
+<!--    <div class="smart-filter-box">-->
+<!--&lt;!&ndash;      <div class="smart-filter-box-top">&ndash;&gt;-->
+<!--&lt;!&ndash;        <span>Опыт работы</span>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--      <div class="smart-filter-box-rows">-->
+<!--        <select class="js-select-filter-city" name="" id="">-->
+<!--          <option value="Москва">Москва</option>-->
+<!--          <option value="Иваново">Иваново</option>-->
+<!--          <option value="Шуя">Шуя</option>-->
+<!--          <option value="Санкт-Петербург">Санкт-Петербург</option>-->
+<!--        </select>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="smart-filter-box">-->
+<!--      <div class="smart-filter-box-top">-->
+<!--        <span>Опыт работы</span>-->
+<!--      </div>-->
+<!--      <div class="smart-filter-box-rows">-->
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="radio" name="experience" id="foundation-2-1">-->
+<!--          <label for="foundation-2-1">Нет опыта </label>-->
+<!--        </div>-->
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="radio" name="experience" id="foundation-2-2">-->
+<!--          <label for="foundation-2-2">От 1 года до 3 лет </label>-->
+<!--        </div>-->
+
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="radio" name="experience" id="foundation-2-3">-->
+<!--          <label for="foundation-2-3">От 3 до 6 лет</label>-->
+<!--        </div>-->
+
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="radio" name="experience" id="foundation-2-4">-->
+<!--          <label for="foundation-2-4">Более 6 лет</label>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="smart-filter-box">-->
+<!--      <div class="smart-filter-box-top">-->
+<!--        <span>График работы</span>-->
+<!--      </div>-->
+<!--      <div class="smart-filter-box-rows">-->
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="checkbox" name="" id="foundation-1" checked>-->
+<!--          <label for="foundation-1">Полный день</label>-->
+<!--        </div>-->
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="checkbox" name="" id="foundation-2" disabled>-->
+<!--          <label for="foundation-2">Удаленная работа</label>-->
+<!--        </div>-->
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="checkbox" name="" id="foundation-3">-->
+<!--          <label for="foundation-3">Гибкий график</label>-->
+<!--        </div>-->
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="checkbox" name="" id="foundation-4">-->
+<!--          <label for="foundation-4">Вахтовый метод</label>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="smart-filter-box">-->
+<!--      <div class="smart-filter-box-top">-->
+<!--        <span>Уровень дохода</span>-->
+<!--      </div>-->
+<!--      <div class="smart-filter-box-rows">-->
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="radio" name="price-1" id="price-1">-->
+<!--          <label for="price-1">Без разницы</label>-->
+<!--        </div>-->
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="radio" name="price-1" id="price-2">-->
+<!--          <label for="price-2">от 100 000 ₽</label>-->
+<!--        </div>-->
+
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="radio" name="price-1" id="price-3">-->
+<!--          <label for="price-3">от 200 000 ₽</label>-->
+<!--        </div>-->
+
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="radio" name="price-1" id="price-4">-->
+<!--          <label for="price-4">от 300 000 ₽</label>-->
+<!--        </div>-->
+
+<!--        <div class="smart-filter-box-row">-->
+<!--          <input type="radio" name="price-1" id="price-5">-->
+<!--          <label for="price-5">от 400 000 ₽</label>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="smart-filter-bottom">-->
+<!--    <button class="btn btn-primary">Показать</button>-->
+<!--    <button class="btn">Сбросить фильтр</button>-->
+<!--  </div>-->
+
+<!--</div>-->

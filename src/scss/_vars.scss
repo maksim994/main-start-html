@@ -1,0 +1,68 @@
+:root {
+  // base
+  --m-font-family: 'Roboto', system-ui, sans-serif;
+  --m-font-family-title: 'Roboto', system-ui, sans-serif;
+
+  // colors
+  --brand-500: #0d6efd;
+  --brand-400: color-mix(in srgb, var(--brand-500) 80%, white);
+  --brand-300: color-mix(in srgb, var(--brand-500) 50%, white);
+  --brand-200: color-mix(in srgb, var(--brand-500) 20%, white);
+  --brand-100: color-mix(in srgb, var(--brand-500) 10%, white);
+  --brand-50: color-mix(in srgb, var(--brand-500) 5%, white);
+
+  --bg-color: #FFFDFD;
+
+  // simple colors
+  --black: #333;
+  --gray: #666;
+  --white: #ffffff;
+
+  // accent color
+  --accent: #f2f6fa;
+
+  // gray color
+  --gray-80: color-mix(in srgb, var(--black) 80%, var(--white));
+  --gray-60: color-mix(in srgb, var(--black) 60%, var(--white));
+  --gray-40: color-mix(in srgb, var(--black) 40%, var(--white));
+  --gray-20: color-mix(in srgb, var(--black) 20%, var(--white));
+  --gray-10: color-mix(in srgb, var(--black) 10%, var(--white));
+  --gray-5: color-mix(in srgb, var(--black) 3%, var(--white));
+
+  // color
+  --color-secondary: #6c757d;
+  --color-success: #198754;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #0dcaf0;
+  --color-light: #f8f9fa;
+
+  // animations
+  --animation: all 0.25s ease-out;
+
+  // swipper
+  --swiper-theme-color: var(--brand-500);
+  --swiper-pagination-bullet-inactive-color: var(--grey-dark);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-time-animate: 1.2s;
+
+  // fancybox
+  --f-button-border-radius: 0;
+
+  // wb-stuff
+  --m-border-radius: 0.25em;  // 4px
+  --m-border-radius-big: calc(var(--m-border-radius) * 2);
+  --m-gap: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1b1b1b;
+    --black: #fff;
+    --white: #1b1b1b;
+    --gray: #a4a4a4;
+  }
+}
+
+$content-width: 1440px;
+$container-offset: 10px;

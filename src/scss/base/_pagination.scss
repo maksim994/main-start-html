@@ -1,0 +1,114 @@
+.pagination {
+  $height: 32px;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 32px;
+
+  @include media(sm){
+    flex-direction: column-reverse;
+    gap: var(--m-gap);
+  }
+
+  // .pagination__list
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  // .pagination__item
+  &__item {
+    width: $height;
+    height: $height;
+    border-radius: var(--m-border-radius);
+    overflow: hidden;
+  }
+
+  &__item_next,
+  &__item_prev{
+    a{
+      display: block;
+      width: $height;
+      height: $height;
+      font-size: 0;
+      background-color: var(--white);
+      border-radius: var(--m-border-radius);
+      transition: var(--animation);
+      position: relative;
+      text-align: center;
+  
+      &::after{
+        content: "";
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none"><mask id="path-1-inside-1_393_3133" fill="white"><path d="M6 1L1 6L6 11"/></mask><path d="M1 6L0.292893 5.29289L-0.414214 6L0.292893 6.70711L1 6ZM5.29289 0.292893L0.292893 5.29289L1.70711 6.70711L6.70711 1.70711L5.29289 0.292893ZM0.292893 6.70711L5.29289 11.7071L6.70711 10.2929L1.70711 5.29289L0.292893 6.70711Z" fill="%23666" mask="url(%23path-1-inside-1_393_3133)"/></svg>');
+        display: inline-block;
+        width: calc($height / 2);
+        height: calc($height / 2);
+        vertical-align: middle;
+      }
+    }
+    
+  }
+
+  &__item_next {
+    a{
+      &::after{
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // .pagination__item_prev
+  &__item_prev {
+    a{
+      &::after{
+        
+      }
+    }
+  }
+
+  // .pagination__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: $height;
+    transition: var(--animation);
+
+    &:hover{
+      background-color: var(--brand-300);
+      color: var(--white);
+    }
+  }
+
+  // .pagination__text
+  &__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: $height;
+    transition: var(--animation);
+  }
+
+  // .pagination__item_active
+
+  &__item_active {
+    background-color: var(--brand-500);
+    color: var(--white);
+
+  }
+
+  // .pagination__item_next
+
+}

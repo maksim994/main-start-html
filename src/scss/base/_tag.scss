@@ -1,0 +1,21 @@
+.tag{
+
+  // .tag-list
+  &-list{
+
+  }
+
+  // .tag-item
+  &-item{
+    padding: em(8) em(16);
+    font-size: em(14);
+    border: 1px solid var(--gray-10);
+    color: var(--black);
+    border-radius: var(--m-border-radius);
+
+    &:hover{
+      background-color: var(--gray-5);
+      color: inherit;
+    }
+  }
+}

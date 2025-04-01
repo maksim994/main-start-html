@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "Возможности - Кнопки"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+  <div class="wrapper">
+    <h1>Возможности - Кнопки</h1>
+
+    <div class="row mt-30">
+      <div class="col-6 col-md-12">
+        <div class="d-f fw-w gap-8">
+          <h2>Стандартные кнопки</h2>
+          <div class="d-f fw-w gap-8">
+            <a href="#" class="btn">Default button</a>
+            <a href="#" class="btn btn-secondary">Secondary button</a>
+            <a href="#" class="btn btn-primary">Primary button</a>
+            <a href="#" class="btn btn-secondary">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M7.99996 2.50002C4.68625 2.50002 1.99996 5.18631 1.99996 8.50002C1.99996 11.8137 4.68625 14.5 7.99996 14.5C11.3137 14.5 14 11.8137 14 8.50002C14 5.18631 11.3137 2.50002 7.99996 2.50002ZM0.666626 8.50002C0.666626 4.44993 3.94987 1.16669 7.99996 1.16669C12.05 1.16669 15.3333 4.44993 15.3333 8.50002C15.3333 12.5501 12.05 15.8334 7.99996 15.8334C3.94987 15.8334 0.666626 12.5501 0.666626 8.50002ZM7.99996 5.16669C8.36815 5.16669 8.66663 5.46516 8.66663 5.83335V7.83335H10.6666C11.0348 7.83335 11.3333 8.13183 11.3333 8.50002C11.3333 8.86821 11.0348 9.16669 10.6666 9.16669H8.66663V11.1667C8.66663 11.5349 8.36815 11.8334 7.99996 11.8334C7.63177 11.8334 7.33329 11.5349 7.33329 11.1667V9.16669H5.33329C4.9651 9.16669 4.66663 8.86821 4.66663 8.50002C4.66663 8.13183 4.9651 7.83335 5.33329 7.83335H7.33329V5.83335C7.33329 5.46516 7.63177 5.16669 7.99996 5.16669Z" />
+              </svg>
+              Button with icon
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="svg inline svg-inline-plus" aria-hidden="true">
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M7.99996 2.50002C4.68625 2.50002 1.99996 5.18631 1.99996 8.50002C1.99996 11.8137 4.68625 14.5 7.99996 14.5C11.3137 14.5 14 11.8137 14 8.50002C14 5.18631 11.3137 2.50002 7.99996 2.50002ZM0.666626 8.50002C0.666626 4.44993 3.94987 1.16669 7.99996 1.16669C12.05 1.16669 15.3333 4.44993 15.3333 8.50002C15.3333 12.5501 12.05 15.8334 7.99996 15.8334C3.94987 15.8334 0.666626 12.5501 0.666626 8.50002ZM7.99996 5.16669C8.36815 5.16669 8.66663 5.46516 8.66663 5.83335V7.83335H10.6666C11.0348 7.83335 11.3333 8.13183 11.3333 8.50002C11.3333 8.86821 11.0348 9.16669 10.6666 9.16669H8.66663V11.1667C8.66663 11.5349 8.36815 11.8334 7.99996 11.8334C7.63177 11.8334 7.33329 11.5349 7.33329 11.1667V9.16669H5.33329C4.9651 9.16669 4.66663 8.86821 4.66663 8.50002C4.66663 8.13183 4.9651 7.83335 5.33329 7.83335H7.33329V5.83335C7.33329 5.46516 7.63177 5.16669 7.99996 5.16669Z" />
+                </svg>
+              </i>
+            Button with icon
+          </a>
+            <a href="#" class="btn btn-primary button-arrow-icons">
+            Button with icon
+            <i class="svg inline svg-inline-arrows" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <path d="M19.6803 9.2219L12.4576 1.99903C12.2514 1.79286 11.9767 1.67969 11.6836 1.67969C11.3903 1.67969 11.1157 1.79302 10.9095 1.99903L10.2537 2.65496C10.0477 2.86082 9.93423 3.13577 9.93423 3.42894C9.93423 3.72195 10.0477 4.00617 10.2537 4.21202L14.4674 8.43492H1.08048C0.476907 8.43492 0 8.90743 0 9.51117V10.4385C0 11.0422 0.476907 11.5624 1.08048 11.5624H14.5152L10.2539 15.8088C10.0479 16.015 9.93439 16.2825 9.93439 16.5757C9.93439 16.8685 10.0479 17.1399 10.2539 17.3459L10.9097 17.9997C11.1158 18.2059 11.3905 18.3183 11.6838 18.3183C11.9768 18.3183 12.2516 18.2044 12.4578 17.9983L19.6805 10.7755C19.8872 10.5687 20.0008 10.2926 20 9.99913C20.0006 9.70466 19.8872 9.42841 19.6803 9.2219Z" fill="currentColor"/>
+              </svg>
+            </i>
+          </a>
+
+            <button type="button" class="btn btn-secondary" disabled="disabled">disabled Default Button</button>
+            <button type="button" class="btn btn-primary" disabled="disabled">disabled Primary button</button>
+          </div>
+
+          <h2>Вспомогательные кнопки</h2>
+          <div class="d-f fw-w gap-8">
+            <a href="#" class="btn btn-success">Success button</a>
+            <a href="#" class="btn btn-danger">Success button</a>
+
+            <a href="#" class="btn btn-warning">Warning button</a>
+            <a href="#" class="btn btn-info">Info button</a>
+            <a href="#" class="btn btn-light">Info button</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-6 col-md-12">
+        <h2>Размеры кнопок</h2>
+        <div class="d-f fw-w gap-8">
+          <a href="#" class="btn btn-sm">Default sm button</a>
+          <a href="#" class="btn btn-secondary button-sm">Secondary sm button</a>
+          <a href="#" class="btn btn-primary button-sm">Primary sm button</a>
+          <a href="#" class="btn btn-secondary button-sm">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M7.99996 2.50002C4.68625 2.50002 1.99996 5.18631 1.99996 8.50002C1.99996 11.8137 4.68625 14.5 7.99996 14.5C11.3137 14.5 14 11.8137 14 8.50002C14 5.18631 11.3137 2.50002 7.99996 2.50002ZM0.666626 8.50002C0.666626 4.44993 3.94987 1.16669 7.99996 1.16669C12.05 1.16669 15.3333 4.44993 15.3333 8.50002C15.3333 12.5501 12.05 15.8334 7.99996 15.8334C3.94987 15.8334 0.666626 12.5501 0.666626 8.50002ZM7.99996 5.16669C8.36815 5.16669 8.66663 5.46516 8.66663 5.83335V7.83335H10.6666C11.0348 7.83335 11.3333 8.13183 11.3333 8.50002C11.3333 8.86821 11.0348 9.16669 10.6666 9.16669H8.66663V11.1667C8.66663 11.5349 8.36815 11.8334 7.99996 11.8334C7.63177 11.8334 7.33329 11.5349 7.33329 11.1667V9.16669H5.33329C4.9651 9.16669 4.66663 8.86821 4.66663 8.50002C4.66663 8.13183 4.9651 7.83335 5.33329 7.83335H7.33329V5.83335C7.33329 5.46516 7.63177 5.16669 7.99996 5.16669Z" />
+            </svg>
+            Button with icon
+          </a>
+        </div>
+
+        <div class="d-f fw-w gap-8">
+          <a href="#" class="btn btn-lg">Default lg button</a>
+          <a href="#" class="btn btn-secondary button-lg">Secondary lg button</a>
+          <a href="#" class="btn btn-primary button-lg">Primary lg button</a>
+          <a href="#" class="btn btn-secondary button-lg">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M7.99996 2.50002C4.68625 2.50002 1.99996 5.18631 1.99996 8.50002C1.99996 11.8137 4.68625 14.5 7.99996 14.5C11.3137 14.5 14 11.8137 14 8.50002C14 5.18631 11.3137 2.50002 7.99996 2.50002ZM0.666626 8.50002C0.666626 4.44993 3.94987 1.16669 7.99996 1.16669C12.05 1.16669 15.3333 4.44993 15.3333 8.50002C15.3333 12.5501 12.05 15.8334 7.99996 15.8334C3.94987 15.8334 0.666626 12.5501 0.666626 8.50002ZM7.99996 5.16669C8.36815 5.16669 8.66663 5.46516 8.66663 5.83335V7.83335H10.6666C11.0348 7.83335 11.3333 8.13183 11.3333 8.50002C11.3333 8.86821 11.0348 9.16669 10.6666 9.16669H8.66663V11.1667C8.66663 11.5349 8.36815 11.8334 7.99996 11.8334C7.63177 11.8334 7.33329 11.5349 7.33329 11.1667V9.16669H5.33329C4.9651 9.16669 4.66663 8.86821 4.66663 8.50002C4.66663 8.13183 4.9651 7.83335 5.33329 7.83335H7.33329V5.83335C7.33329 5.46516 7.63177 5.16669 7.99996 5.16669Z" />
+            </svg>
+            Button with icon
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+@include('partials/component/footer.html')
+</body>
+</html>

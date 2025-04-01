@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "Возможности - Элементы"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+  <div class="wrapper">
+    <h1>Возможности - Элементы</h1>
+
+    <div class="tabs">
+      <ul class="tabs-nav">
+        <li><a href="#tab-1" class="tabs-btn" data-toggle="tab">Вкладка 1</a></li>
+        <li><a href="#tab-2" class="tabs-btn" data-toggle="tab">Вкладка 2</a></li>
+      </ul>
+      <div class="tabs-items">
+        <div class="tabs-item" id="tab-1">
+          <div class="tabs-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, esse!</div>
+
+          <p>Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio
+            vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien.
+            Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim
+            vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor.</p>
+        </div>
+        <div class="tabs-item" id="tab-2">
+          <div class="tabs-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est laborum</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr-line">
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Accordion</h2>
+        
+        <ul class="accordion__list">
+          <li class="accordion">
+            <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">Accordion 1</span>
+              <span class="accordion__icon"></span>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, harum!</p>
+            </div>
+          </li>
+          <li class="accordion">
+            <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ut?</span>
+              <span class="accordion__icon"></span>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, beatae!
+              Labore, tenetur. Id&nbsp;culpa quas, eos magnam quos laboriosam quasi.
+            </div>
+          </li>
+  
+          <li class="accordion">
+            <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab&nbsp;aspernatur atque distinctio ipsa iusto minima modi molestiae quidem quo, totam!</span>
+              <span class="accordion__icon"></span>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, beatae!
+              Labore, tenetur. Id&nbsp;culpa quas, eos magnam quos laboriosam quasi.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="tall">
+    <div class="row">
+      <h2>Раскрывающиеся текст</h2>
+      <div class="drop-down-box js-drop-down-box" data-height="129">
+        <div class="drop-down-box__content">
+          <p>Правильность постановки диагнозов и назначенного лечения зависит от функциональности и точности медицинского оборудования. Мы предлагаем современное и высокотехнологичное оборудование для государственных и частных учреждений здравоохранения. Работаем с лучшими российскими и зарубежными производителями. В нашей компании вы сможете заказать оборудование, мебель, косметологические приборы и высокоточную аппаратуру для лабораторий.</p>
+          <hr class="divider drop-down-box__divider">
+          <p>Опытные инженеры компании Allcorp3 произведут качественную и оперативную установку оборудования, наладку и запуск в эксплуатацию. Наши специалисты обязательно проведут инструктаж по пользованию и уходу за оборудованием. Если в процессе эксплуатации возникнет поломка, то инженеры компании быстро устранят ее и дадут гарантию на свою работу.</p>
+          <p>Для обустройства дома и&nbsp;дачи найдутся подходящее постельное белье, элементы интерьера и&nbsp;кухонный текстиль. Товары в&nbsp;нашем каталоге сортируются с&nbsp;помощью &laquo;умного фильтра&raquo;&nbsp;&mdash; вы&nbsp;сможете найти все нужное в&nbsp;считанные минуты. На&nbsp;страницах сайта вы&nbsp;увидите описание товаров, технические характеристики и&nbsp;даже инструкции по&nbsp;эксплуатации.</p>
+          <p>Получить и&nbsp;оплатить заказ можно в&nbsp;пунктах выдачи товаров или при доставке курьером. Возникли вопросы? Напишите нам в&nbsp;онлайн-чат или свяжитесь по&nbsp;телефону. Удачных покупок!</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="form inline FEEDBACK">
+      <!--noindex-->
+      <div class="form_head">
+        <h4>Форма в ряд</h4>
+      </div>
+      <form name="FEEDBACK" action="/info/more/elements/" method="POST" enctype="multipart/form-data"
+        novalidate="novalidate">
+        <div class="form_body">
+          <div class="form-control">
+            <label><span>Сообщение&nbsp;<span class="star">*</span></span></label>
+            <textarea data-sid="POST" required="" name="form_textarea_14" cols="40" rows="5" left=""></textarea>
+          </div>
+          <div class="form-control">
+            <label><span>Ваше имя&nbsp;<span class="star">*</span></span></label>
+            <input type="text" class="inputtext" data-sid="CLIENT_NAME" required="" name="form_text_11" value=""
+              size="0">
+          </div>
+          <div class="form-control">
+            <label><span>Контактный телефон&nbsp;<span class="star">*</span></span></label>
+            <input type="text" class="phone" data-sid="PHONE" required="" name="form_text_12" value="" size="0">
+          </div>
+          <div class="form-control">
+            <label><span>E-mail</span></label>
+            <input type="email" placeholder="mail@domen.com" class="inputtext" data-sid="EMAIL" name="form_email_13" value="" size="0">
+          </div>
+
+          <div class="licence_block filter onoff label_block">
+            <input type="checkbox" id="licenses_popup" name="licenses_popup" required="" value="Y" aria-required="true">
+            <label for="licenses_popup">Я согласен на <a href="/include/licenses_detail.php" target="_blank">обработку персональных данных</a></label>
+          </div>
+
+          <div class="clearboth"></div>
+        </div>
+        <div class="form_footer">
+          <button type="submit" class="btn btn-primary" value="submit" name="web_form_submit"><span>Отправить</span></button>
+          <button type="reset" class="btn " value="reset" name="web_form_reset"><span>Отменить</span></button>
+        </div>
+      </form>
+      <!--/noindex-->
+    </div>
+
+    <hr class="hr-line">
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Пагинация</h2>
+        @include('partials/base/pagination.html')
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <hr class="hr-line">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Labels</h2>
+        <span class="label label-default">Default</span>
+        <span class="label label-primary">Primary</span>
+        <span class="label label-success">Success</span>
+        <span class="label label-info">Info</span>
+        <span class="label label-warning">Warning</span>
+        <span class="label label-danger">Danger</span>
+
+        <h2 class="spaced">Tooltips</h2>
+        <p><span data-tooltip="Tooltip help here!" data-flow="top">CSS Tooltips - top</span></p>
+        <p><span data-tooltip="Tooltip help here!" data-flow="bottom">CSS Tooltips - bottom</span></p>
+        <p><span data-tooltip="Tooltip help here!" data-flow="left">CSS Tooltips - left</span></p>
+        <p><span data-tooltip="Tooltip help here!" data-flow="right">CSS Tooltips - right</span></p>
+
+      </div>
+    </div>
+    <hr class="hr-line">
+    <div class="row">
+
+      <div class="col-md-12">
+
+      </div>
+      <div class="col-md-12">
+        <blockquote class="info">Text</blockquote>
+      </div>
+    </div>
+
+
+    <div class="grid-list mt-30">
+      <div class="cards cards-staff d-f fw-w fd-md-c border p-32 p-mobile gap cards-hover">
+        <div class="cards__top w-280">
+          <picture class="cards__images img img-round img-120">
+            <img src="https://corporate.hubsup.ru/upload/iblock/f6f/alqe8spa4m7j3egr7ymt720a1jqslbxk.jpg" alt="@name">
+          </picture>
+        </div>
+        <div class="cards__inner d-f fd-c gap-8 p-0 flex1">
+          <div class="cards__info fs-13 d-f fw-w gap-8">
+            Директор по маркетингу
+          </div>
+
+          <div class="cards__name fs-18 switcher-title">
+            <a href="#">Алина Миронова</a>
+          </div>
+
+          <div class="cards__prevtext d-f fd-r fw-w gap">
+            <div class="cards__contact">
+              <span class="d-b fs-14">Телефон</span>
+              <a href="#" class="dark-link">+7 (000) 000-00-00</a>
+            </div>
+            <div class="cards__contact">
+              <span class="d-b fs-14">E-mail</span>
+              <a href="#" class="dark-link">commerce@site.ru</a>
+            </div>
+
+          </div>
+
+
+          <div class="cards__prevtext fs-14">
+            <p>Разрабатывает стратегии продвижения по России и за рубежом.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+@include('partials/component/footer.html')
+
+</body>
+</html>

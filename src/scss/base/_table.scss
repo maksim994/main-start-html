@@ -1,0 +1,114 @@
+table {
+  width: 100%;
+  vertical-align: top;
+
+  table-layout: fixed;
+  caption-side: bottom;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  @include media(sm) {
+    table-layout: auto;
+  }
+
+  thead {
+    td,
+    th {
+      color: var(--black);
+      font-weight: 500;
+      font-size: 110%;
+      line-height: 1.2;
+      text-align: left;
+
+      border-top: 1px solid var(--gray-10);
+
+      &:first-child {
+        border-radius: var(--m-border-radius) 0 0 0px;
+      }
+
+      &:last-child {
+        border-radius: 0 var(--m-border-radius) 0 0;
+      }
+    }
+  }
+
+  &:not(:has(thead)) > tbody > tr:first-of-type td {
+    border-top: 1px solid var(--gray-10);
+  }
+
+  tbody {
+    tr {
+      &:last-child {
+        td {
+          &:first-child {
+            border-radius: 0px 0 0 var(--m-border-radius);
+          }
+
+          &:last-child {
+            border-radius: 0 0 var(--m-border-radius) 0;
+          }
+        }
+      }
+    }
+  }
+
+  td,
+  th {
+    padding: clamp(10px, 10px, 12px);
+    border-right: 1px solid var(--gray-10);
+    border-bottom: 1px solid var(--gray-10);
+
+    &:first-child {
+      border-left: 1px solid var(--gray-10);
+    }
+  }
+
+  caption {
+    padding: clamp(8px, 10px, 12px);
+    color: var(--neutral-200);
+    text-align: left;
+  }
+
+  &.table-th {
+    thead {
+      th {
+        background-color: var(--neutral-100);
+      }
+    }
+  }
+}
+
+.table-respose {
+  overflow: scroll;
+}
+
+// mobile
+
+@media (max-width: 768px) {
+  table tr td:first-child,
+  table tr th:first-child {
+    border-top: 1px solid var(--gray-10);
+  }
+
+  .table-mob thead {
+    display: none;
+  }
+
+  .table-mob tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .table-mob td {
+    display: block;
+    border-bottom: 1px solid var(--gray-10);
+    border-left: 1px solid var(--gray-10);
+  }
+
+  .table-mob td::before {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    content: attr(data-label);
+  }
+}

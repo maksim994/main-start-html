@@ -1,0 +1,55 @@
+@import "base/base";
+@import "element/element";
+@import "component/component";
+@import "page/page";
+@import "vars";
+
+main.main {
+  flex-grow: 1;
+  margin-bottom: em(70);
+
+  @include media(sm) {
+    margin-bottom: em(40);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--gray-60);
+  font-family: var(--m-font-family), serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+
+  min-height: 100vh;
+
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+
+  &.dark-theme{
+    --bg-color: #1b1b1b;
+    --black: #ffffff;
+    --white: #1b1b1b;
+    --gray: #a4a4a4;
+  }
+
+}
+
+// .overflow
+.overflow {
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    background-color: rgba(17, 24, 28, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+  }
+}

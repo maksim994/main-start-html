@@ -1,0 +1,125 @@
+
+.accordion {
+
+  &:not(:last-child){
+    margin-bottom: 4px;
+  }
+
+  // .accordion__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  // .accordion__control
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--m-gap);
+    width: 100%;
+    padding: em(18);
+    list-style: none;
+    background-color: var(--white);
+    border: 1px solid var(--gray-10);
+    border-radius: var(--m-border-radius);
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  // .accordion__title
+  &__title {
+    margin: 0;
+    text-align: left;
+    color: var(--black);
+  }
+
+  // .accordion__icon
+  &__icon {
+    position: relative;
+    display: inline-block;
+
+    width: 32px;
+    height: 32px;
+    background-color: var(--brand-500);
+    border-radius: 1000px;
+    transition: transform 0.3s ease-out;
+
+    &::after,
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: var(--white);
+      transform: translate(-50%, -50%);
+      content: "";
+    }
+
+    &::after {
+      width: 2px;
+      height: 16px;
+    }
+
+    &::before {
+      width: 16px;
+      height: 2px;
+    }
+  }
+
+  // .accordion__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--m-gap);
+    align-items: flex-start;
+    box-sizing: content-box;
+    max-height: 0;
+    padding: 0 em(20);
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--gray-10);
+    border-top: 1px solid transparent;
+    border-radius: 0 0 var(--m-border-radius) var(--m-border-radius);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    will-change: max-height;
+
+    .h1, .h2, .h3, .h4, .h5,
+    h1, h2, h3, h4, h5{
+      margin: 0;
+      font-size: 120%;
+      line-height: inherit;
+    }
+
+    p{
+      margin: 0;
+
+      &:not(:last-child){
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+// открытий аккордион
+.open {
+  .accordion__icon {
+    transform: rotate(45deg);
+  }
+
+  .accordion__control {
+    border-radius: var(--m-border-radius) var(--m-border-radius) 0 0;
+    transition: border-radius 0.2s ease;
+  }
+
+  .accordion__content {
+    padding: clamp(14px, 0.84vw, 20px);
+    opacity: 1;
+  }
+}
