@@ -3,6 +3,8 @@
   --m-font-family: 'Roboto', system-ui, sans-serif;
   --m-font-family-title: 'Roboto', system-ui, sans-serif;
 
+  --bg-color: #FFFDFD;
+
   // colors
   --brand-500: #0d6efd;
   --brand-400: color-mix(in srgb, var(--brand-500) 80%, white);
@@ -11,15 +13,10 @@
   --brand-100: color-mix(in srgb, var(--brand-500) 10%, white);
   --brand-50: color-mix(in srgb, var(--brand-500) 5%, white);
 
-  --bg-color: #FFFDFD;
-
   // simple colors
   --black: #333;
   --gray: #666;
   --white: #ffffff;
-
-  // accent color
-  --accent: #f2f6fa;
 
   // gray color
   --gray-80: color-mix(in srgb, var(--black) 80%, var(--white));
@@ -50,9 +47,9 @@
   --f-button-border-radius: 0;
 
   // wb-stuff
-  --m-border-radius: 0.25em;  // 4px
-  --m-border-radius-big: calc(var(--m-border-radius) * 2);
-  --m-gap: 20px;
+  --border-radius: 0.25em;  // 4px
+  --border-radius-big: calc(var(--m-border-radius) * 2);
+  --gap: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,3 +63,103 @@
 
 $content-width: 1440px;
 $container-offset: 10px;
+
+//
+//:root {
+//  // base
+//  --m-font-family: 'Roboto', system-ui, sans-serif;
+//  --m-font-family-title: 'Roboto', system-ui, sans-serif;
+//
+//  --bg-color: #FFFDFD;
+//
+//  // simple colors
+//  --black: #000;
+//  --white: #ffffff;
+//
+//  // colors
+//  --brand-900: #312E81;
+//  --brand-800: #3730A3;
+//  --brand-700: #4338CA;
+//  --brand-600: #4F46E5;
+//  --brand-500: #6366F1;
+//  --brand-400: #818CF8;
+//  --brand-300: #A5B4FC;
+//  --brand-200: #C7D2FE;
+//  --brand-100: #E0E7FF;
+//  --brand-50: #EEF2FF;
+//
+//  //--brand-800: color-mix(in srgb, var(--brand-900) 80%, white);
+//  //--brand-700: color-mix(in srgb, var(--brand-900) 70%, white);
+//  //--brand-600: color-mix(in srgb, var(--brand-900) 60%, white);
+//  //--brand-500: color-mix(in srgb, var(--brand-900) 50%, white);
+//  //--brand-400: color-mix(in srgb, var(--brand-900) 40%, white);
+//  //--brand-300: color-mix(in srgb, var(--brand-900) 30%, white);
+//  //--brand-200: color-mix(in srgb, var(--brand-900) 20%, white);
+//  //--brand-100: color-mix(in srgb, var(--brand-900) 10%, white);
+//  //--brand-50: color-mix(in srgb, var(--brand-900) 5%, white);
+//
+//  // neutral
+//  --neutral-900: #0F172A;
+//  --neutral-800: color-mix(in srgb, var(--neutral-900) 80%, white);
+//  --neutral-700: color-mix(in srgb, var(--neutral-900) 70%, white);
+//  --neutral-600: color-mix(in srgb, var(--neutral-900) 60%, white);
+//  --neutral-500: color-mix(in srgb, var(--neutral-900) 50%, white);
+//  --neutral-400: color-mix(in srgb, var(--neutral-900) 40%, white);
+//  --neutral-300: color-mix(in srgb, var(--neutral-900) 30%, white);
+//  --neutral-200: color-mix(in srgb, var(--neutral-900) 20%, white);
+//  --neutral-100: color-mix(in srgb, var(--neutral-900) 10%, white);
+//  --neutral-50: color-mix(in srgb, var(--neutral-900) 5%, white);
+//
+//  // rose
+//  --rose-600: #E11D48;
+//  --rose-400: color-mix(in srgb, var(--rose-600) 40%, white);
+//  --rose-50: color-mix(in srgb, var(--rose-600) 5%, white);
+//
+//  // amber
+//  --amber-600: #D97706;
+//  --amber-400: color-mix(in srgb, var(--amber-600) 40%, white);
+//  --amber-50: color-mix(in srgb, var(--amber-600) 5%, white);
+//
+//  // teal
+//  --teal-600: #0D9488;
+//  --teal-400: color-mix(in srgb, var(--teal-600) 40%, white);
+//  --teal-50: color-mix(in srgb, var(--teal-600) 5%, white);
+//
+//
+//  // color
+//  --color-secondary: #6c757d;
+//  --color-success: #198754;
+//  --color-danger: #dc3545;
+//  --color-warning: #ffc107;
+//  --color-info: #0dcaf0;
+//  --color-light: #f8f9fa;
+//
+//  // animations
+//  --animation: all 0.25s ease-out;
+//
+//  // swipper
+//  --swiper-theme-color: var(--brand-500);
+//  --swiper-pagination-bullet-inactive-color: var(--grey-dark);
+//  --swiper-pagination-bullet-inactive-opacity: 1;
+//  --swiper-time-animate: 1.2s;
+//
+//  // fancybox
+//  --f-button-border-radius: 0;
+//
+//  // wb-stuff
+//  --m-border-radius: 0.25em;  // 4px
+//  --m-border-radius-big: calc(var(--m-border-radius) * 2);
+//  --m-gap: 20px;
+//}
+//
+//@media (prefers-color-scheme: dark) {
+//  :root {
+//    --bg-color: #1b1b1b;
+//    --black: #fff;
+//    --white: #1b1b1b;
+//    --gray: #a4a4a4;
+//  }
+//}
+//
+//$content-width: 1440px;
+//$container-offset: 10px;

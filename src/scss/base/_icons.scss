@@ -79,3 +79,39 @@
     color: var(--brand-500);
   }
 }
+
+
+
+.avatar{
+  width: em(48);
+  height: em(48);
+
+  border-radius: em(1000);
+  overflow: hidden;
+
+  img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  // .avatar-sm
+  &-sm{
+    width: em(32);
+    height: em(32);
+  }
+
+  // .avatar-lg
+  &-lg{
+    width: em(56);
+    height: em(56);
+  }
+
+  // .avatar-xl
+  &-xl{
+    width: em(144);
+    height: em(144);
+  }
+
+}

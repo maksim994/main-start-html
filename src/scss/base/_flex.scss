@@ -114,8 +114,7 @@
 
 @include flex-classes();
 
-@each $breakpoint, $value in $breakpoints
-{
+@each $breakpoint, $value in $breakpoints {
   @media (max-width: $value) {
     @include flex-classes-media($breakpoint);
   }

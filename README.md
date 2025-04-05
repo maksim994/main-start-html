@@ -1,4 +1,4 @@
-# Новая версия коробочного решения
+# Стартовая сборка для верстки
 
 Демо - https://site-box-aspro-v2.netlify.app
 
@@ -23,8 +23,9 @@
 * small: 360px
 
 ## Container + Grid
-
-``.wrapper`` - контейнер
+```angular2html
+    <div class="wrapper"></div>
+```
 
 ### Grid
 * ```.row``` - строка
@@ -43,7 +44,9 @@
 * ```.fd-r``` - flex-direction: row
 * ```.fb-100``` - flex-basis: 100%
 
-```.d-xxl-f```, ```.d-xl-f```, ```.d-lg-f```, ```.d-md-f```, ```.d-sm-f```, ```.d-small-f``` 
+Пример использование с breakpoints
+
+```.d-xxl-f```, ```.d-xl-f```, ```.d-lg-f```, ```.d-md-f```, ```.d-sm-f```, ```.d-small-f```
 
 ### align-items
 * ```.ai-c``` - align-items: center
@@ -60,3 +63,64 @@
 * ```.jc-fs``` - justify-content: flex-start
 * ```.jc-fc``` - justify-content: center
 * ```.jc-sb``` - justify-content: space-between
+
+
+## Текст 
+Пример оформления можно посмотреть - ```more-typograpy.html```
+### Форматирование текста
+* ```.text-center``` - Текст по центру
+* ```.text-left``` - Текст по левой стороне
+* ```.text-right``` - Текст по правой стороне
+
+### Размеры текста
+* ```.text-lg``` - 18px
+* ```.text-sm``` - 14p
+* ```.text-xs``` - 12px
+
+### Вспомогательный текст
+````angular2html
+<p class="text-upper">Текст в верхнем регистре</p>
+<p class="text-brand">Брендовый текст</p>
+<p class="text-dark">Темный текст</p>
+<p class="text-white">Светлый текст</p>
+````
+
+## Тени
+Пример оформления можно посмотреть - ```more-elements.html```
+* ```.shadow```
+* ```.shadow-sm```
+* ```.shadow-md```
+* ```.shadow-lg```
+* ```.shadow-xl```
+* ```.shadow-2xl```
+* ```.shadow-inner```
+
+## Border-radius
+Пример оформления можно посмотреть - ```more-elements.html```
+* ```.shadow```
+* ```.shadow-sm```
+* ```.shadow-md```
+* ```.shadow-lg```
+* ```.shadow-xl```
+* ```.shadow-2xl```
+* ```.shadow-inner```
+
+## Аватарки
+Базовый класс ```.avatar``` обязательный в нем заданы основные стили
+```
+<div class="avatar avatar-sm">
+    <img src="https://avatarko.ru/img/kartinka/24/muzhchina_23168.jpg" alt="">
+</div>
+
+<div class="avatar">
+    <img src="https://avatarko.ru/img/kartinka/24/muzhchina_23168.jpg" alt="">
+</div>
+
+<div class="avatar avatar-lg">
+    <img src="https://avatarko.ru/img/kartinka/24/muzhchina_23168.jpg" alt="">
+</div>
+
+<div class="avatar avatar-xl">
+    <img src="https://avatarko.ru/img/kartinka/24/muzhchina_23168.jpg" alt="">
+</div>
+```

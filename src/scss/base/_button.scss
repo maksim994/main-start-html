@@ -1,3 +1,158 @@
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: em(8);
+
+  padding: em(10) em(16);
+  color: var(--black);
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: em(8);
+  transition: var(--animation);
+  border: 0;
+
+  &:hover{
+    background-color: var(--gray-5);
+    color: inherit;
+  }
+
+  &:active{
+    background-color: var(--gray-10);
+    color: inherit;
+  }
+
+  &:disabled{
+    color: var(--gray-20);
+    cursor: not-allowed !important;
+  }
+
+  .svg{
+    flex: none;
+    top: -1px;
+    width: em(16);
+    height: em(16);
+  }
+
+  &.btn-icons{
+    gap: 0;
+    padding: em(10);
+
+    .svg{
+      display: block;
+    }
+  }
+
+  // size
+  &.btn-lg{
+    padding: em(16) em(32);
+  }
+
+  &.btn-sm{
+    padding: em(6) em(12);
+  }
+
+  &.btn-secondary{
+    color: var(--black);
+    background-color: var(--gray-10);
+
+    &:hover{
+      background-color: var(--gray-20);
+    }
+
+    &:active{
+      background-color: var(--gray-40);
+    }
+  }
+
+  &.btn-primary{
+    color: var(--white);
+    background-color: var(--brand-500);
+
+    &:hover{
+      background-color: var(--brand-300);
+    }
+
+    &:active{
+      background-color: var(--brand-400);
+    }
+  }
+
+  &.btn-success{
+    background-color: var(--color-success);
+    color: var(--white);
+
+    &:hover{
+      opacity: .8;
+    }
+
+    &:active{
+      opacity: .9;
+    }
+  }
+
+  &.btn-danger{
+    background-color: var(--color-danger);
+    color: var(--white);
+
+    &:hover{
+      opacity: .8;
+    }
+
+    &:active{
+      opacity: .9;
+    }
+  }
+
+  &.btn-warning{
+    background-color: var(--color-warning);
+    color: var(--black);
+
+    &:hover{
+      opacity: .8;
+    }
+
+    &:active{
+      opacity: .9;
+    }
+  }
+
+  &.btn-info{
+    background-color: var(--color-info);
+    color: var(--white);
+
+    &:hover{
+      opacity: .8;
+    }
+
+    &:active{
+      opacity: .9;
+    }
+  }
+
+  &.btn-light{
+    background-color: var(--color-light);
+    color: var(--black);
+
+    &:hover{
+      opacity: .8;
+    }
+
+    &:active{
+      opacity: .9;
+    }
+  }
+}
+
+
+.text-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: em(8);
+
+}
+
+/*
+
 .btn {
   --button-bg: var(--brand-500, #0d6efd);
   --button-color: var(--white, #FFF);
@@ -189,3 +344,6 @@
     }
   }
 }
+
+
+ */

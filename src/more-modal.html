@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+  "title": "Возможности - Модальные окна"
+})
+
+@include('partials/component/header.html')
+<body>
+<main class="main">
+  <div class="wrapper">
+    <h1>Возможности - Модальные окна</h1>
+
+    <button class="btn btn-secondary" data-fancybox="" data-src="#extra-small">Modal Extra Small</button>
+    <button class="btn btn-secondary" data-fancybox="" data-src="#small">Modal Small</button>
+    <button class="btn btn-secondary" data-fancybox="" data-src="#medium">Modal Medium</button>
+
+    <div id="extra-small" class="modal modal_extra-small" style="display: none">
+      <div class="modal__header h4">Модальное окно extra-small</div>
+      <div class="modal__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nobis.</p>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn-secondary">btn</button>
+      </div>
+    </div>
+
+    <div id="small" class="modal modal_small" style="display: none">
+      <div class="modal__header h4">Модальное окно Small</div>
+      <div class="modal__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nobis.</p>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn-secondary">btn</button>
+      </div>
+    </div>
+
+    <div id="medium" class="modal modal_medium" style="display: none">
+      <div class="modal__header h4">Модальное окно Small</div>
+      <div class="modal__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nobis.</p>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn-secondary">btn</button>
+      </div>
+    </div>
+
+  </div>
+</main>
+@include('partials/component/footer.html')
+</body>
+</html>

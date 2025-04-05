@@ -2,12 +2,12 @@
 @import 'variables';
 @import 'mixins';
 @import 'grid';
+@import 'typograf';
 @import 'flex';
-
 @import 'forms';
 @import 'button';
 @import 'section';
-// @import 'slider';
+@import 'slider';
 @import 'tabs';
 @import 'icons';
 @import 'pagination';
@@ -16,31 +16,17 @@
 @import 'label';
 @import 'modal';
 @import 'filter';
-// @import 'swipper';
 @import 'accordion';
 @import 'images';
 @import 'offset';
 @import 'slider';
 @import 'tooltip';
-@import 'typograf';
+
 @import 'tag';
+@import 'shadow';
+@import 'border-radius';
+@import 'drop-down-box';
 
-.flex1{
-  flex: 1;
-}
-
-.w-280{
-  max-width: em(280);
-
-}
-
-.border{
-  border: 1px solid var(--gray-10);
-}
-
-.round{
-  border-radius: var(--m-border-radius);
-}
 
 .hr-line {
   margin: 20px 0;

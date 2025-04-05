@@ -1,0 +1,44 @@
+.rounded{
+  border-radius: em(4);
+
+  // .rounded-none
+  &-none{
+    border-radius: 0;
+  }
+
+  // .rounded-sm
+  &-sm{
+    border-radius: em(2);
+  }
+
+  // .rounded-md
+  &-md{
+    border-radius: em(6);
+  }
+
+  // .rounded-lg
+  &-lg{
+    border-radius: em(8);
+  }
+
+  // .rounded-xl
+  &-xl{
+    border-radius: em(12);
+  }
+
+  // .rounded-2xl
+  &-2xl{
+    border-radius: em(16);
+  }
+
+  // .rounded-3xl
+  &-3xl{
+    border-radius: em(24);
+  }
+
+  // .rounded-full
+  &-full{
+    border-radius: em(1000);
+  }
+
+}

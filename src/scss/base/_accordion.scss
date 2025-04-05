@@ -1,5 +1,6 @@
 
 .accordion {
+  border: 1px solid var(--gray-10);
 
   &:not(:last-child){
     margin-bottom: 4px;
@@ -7,11 +8,7 @@
 
   // .accordion__list
   &__list {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+
   }
 
   // .accordion__control
@@ -21,21 +18,28 @@
     justify-content: space-between;
     gap: var(--m-gap);
     width: 100%;
-    padding: em(18);
-    list-style: none;
+    padding: em(20);
     background-color: var(--white);
-    border: 1px solid var(--gray-10);
-    border-radius: var(--m-border-radius);
+
+    border-radius: var(--border-radius);
     cursor: pointer;
 
     &::-webkit-details-marker {
       display: none;
+    }
+
+    &:hover{
+      .accordion__icon{
+        background-color: var(--brand-500);
+        color: var(--white);
+      }
     }
   }
 
   // .accordion__title
   &__title {
     margin: 0;
+    flex: 1;
     text-align: left;
     color: var(--black);
   }
@@ -43,32 +47,24 @@
   // .accordion__icon
   &__icon {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    width: 32px;
-    height: 32px;
-    background-color: var(--brand-500);
-    border-radius: 1000px;
-    transition: transform 0.3s ease-out;
+    border: 1px solid var(--gray-10);
+    border-radius: var(--border-radius);
 
-    &::after,
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      background-color: var(--white);
-      transform: translate(-50%, -50%);
-      content: "";
-    }
+    width: em(32);
+    height: em(32);
 
-    &::after {
-      width: 2px;
-      height: 16px;
-    }
+    transition: var(--animation);
 
-    &::before {
-      width: 16px;
-      height: 2px;
+    color: var(--gray-80);
+    .svg{
+      top: -1px;
+      width: em(16);
+      height: em(16);
+
     }
   }
 
@@ -76,16 +72,13 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: var(--m-gap);
+    gap: var(--gap);
     align-items: flex-start;
     box-sizing: content-box;
     max-height: 0;
     padding: 0 em(20);
     overflow: hidden;
-    background-color: var(--white);
-    border: 1px solid var(--gray-10);
     border-top: 1px solid transparent;
-    border-radius: 0 0 var(--m-border-radius) var(--m-border-radius);
     opacity: 0;
     transition: all 0.3s ease-out;
     will-change: max-height;
@@ -110,7 +103,7 @@
 // открытий аккордион
 .open {
   .accordion__icon {
-    transform: rotate(45deg);
+    transform: rotate(180deg);
   }
 
   .accordion__control {
