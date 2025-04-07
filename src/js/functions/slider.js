@@ -1,0 +1,42 @@
+addEventListener('DOMContentLoaded', (event) => {
+
+    $('.slider').each(function( index ) {
+        let sliderItems = $(this).attr('data-slider-items');
+
+        let sliderItemsMobile = $(this).attr('data-slider-items-mobile');
+        let sliderItemsTable = $(this).attr('data-slider-items-table');
+
+        let dots = $(this).attr('data-dots') ? $(this).attr('data-dots') : false ;
+        let arrows = $(this).attr('data-arrows') ? $(this).attr('data-arrows') : false ;
+
+
+        if ( $(this).find('.items').length >= sliderItems) {
+            $(this).slick({
+                infinite: true,
+                dots: $.parseJSON(dots),
+                arrows: $.parseJSON(arrows),
+                slidesToShow: sliderItems,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: sliderItemsTable,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: sliderItemsMobile,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        }
+    });
+
+});

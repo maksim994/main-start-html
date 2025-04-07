@@ -10,6 +10,7 @@
   position: relative;
   background-repeat: no-repeat;
   background-position: center center;
+
   min-width: auto;
   min-height: auto;
 
@@ -20,57 +21,32 @@
 
 }
 
+.icons{
+  color: var(--gray-60);
 
+  // &.icons-8
+  &.icons-8{
+    width: em(8);
+    height: em(8);
+  }
 
-.icons-16 {
-  width: rem(16);
-  height: rem(16);
+  // &.icons-12
+  &.icons-12{
+    width: em(12);
+    height: em(12);
+  }
+
+  // &.icons-24
+  &.icons-24{
+    width: em(24);
+    height: em(24);
+  }
 
   .svg, svg{
     width: 100%;
     height: 100%;
   }
-}
 
-.icons-24 {
-  width: rem(24);
-  height: rem(24);
-
-  .svg, svg{
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.icons-32 {
-  width: rem(32);
-  height: rem(32);
-
-  .svg,svg{
-    width: 100%;
-    height: 100%;
-  }
-
-}
-
-.icons-40 {
-  width: 40px;
-  height: 40px;
-
-  .svg,svg{
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.icons-60 {
-  width: 60px;
-  height: 60px;
-
-  .svg,svg{
-    width: 100%;
-    height: 100%;
-  }
 }
 
 

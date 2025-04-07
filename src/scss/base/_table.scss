@@ -23,11 +23,11 @@ table {
       border-top: 1px solid var(--gray-10);
 
       &:first-child {
-        border-radius: var(--m-border-radius) 0 0 0px;
+        border-radius: var(--border-radius) 0 0 0;
       }
 
       &:last-child {
-        border-radius: 0 var(--m-border-radius) 0 0;
+        border-radius: 0 var(--border-radius) 0 0;
       }
     }
   }
@@ -41,11 +41,11 @@ table {
       &:last-child {
         td {
           &:first-child {
-            border-radius: 0px 0 0 var(--m-border-radius);
+            border-radius: 0px 0 0 var(--border-radius);
           }
 
           &:last-child {
-            border-radius: 0 0 var(--m-border-radius) 0;
+            border-radius: 0 0 var(--border-radius) 0;
           }
         }
       }
@@ -76,39 +76,61 @@ table {
       }
     }
   }
+
+  &.table-striped{
+
+    tbody>tr:nth-of-type(odd)>*{
+      background-color: var(--gray-5);
+    }
+  }
+
+  &.table-hover{
+    tbody>tr{
+      transition: var(--animation);
+      &:hover{
+        *{
+          background-color: var(--gray-5);
+        }
+      }
+    }
+  }
 }
 
-.table-respose {
+.table-response {
   overflow: scroll;
 }
 
 // mobile
 
-@media (max-width: 768px) {
-  table tr td:first-child,
-  table tr th:first-child {
-    border-top: 1px solid var(--gray-10);
-  }
+@include media(md) {
+  .table-mobile{
 
-  .table-mob thead {
-    display: none;
-  }
+    thead {
+      display: none;
+    }
 
-  .table-mob tr {
-    display: block;
-    margin-bottom: 10px;
-  }
+    tr {
+      display: block;
+      margin-bottom: em(8);
 
-  .table-mob td {
-    display: block;
-    border-bottom: 1px solid var(--gray-10);
-    border-left: 1px solid var(--gray-10);
-  }
+      td:first-child,
+      th:first-child {
+        border-top: 1px solid var(--gray-10);
+      }
+    }
 
-  .table-mob td::before {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 700;
-    content: attr(data-label);
+    td {
+      display: block;
+      border-bottom: 1px solid var(--gray-10);
+      border-left: 1px solid var(--gray-10);
+
+      &::before {
+        display: block;
+        margin-bottom: em(4);
+        font-weight: 700;
+        content: attr(data-label);
+      }
+    }
+
   }
 }

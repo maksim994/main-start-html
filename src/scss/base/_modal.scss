@@ -1,6 +1,4 @@
-.fancybox__content{
-  background: var(--white);
-}
+
 
 .modal {
   max-width: 100%;
@@ -31,7 +29,7 @@
 
   // .modal__content
   &__content{
-    color: inherit;
+    //color: inherit;
   }
 
   // .modal__footer
@@ -40,7 +38,8 @@
   }
 
   &.fancybox__content {
-    color: inherit;
+    background: var(--white);
+    //color: currentColor;
 
     .f-button.is-close-btn {
       top: em(12);

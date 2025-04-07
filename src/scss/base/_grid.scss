@@ -24,7 +24,7 @@ $width: calc(100% / $columns-count);
 
   // .row-list
   &-list {
-    row-gap: var(--m-gap);
+    row-gap: var(--gap);
   }
 }
 

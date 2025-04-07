@@ -52,3 +52,24 @@ body {
     z-index: 9;
   }
 }
+
+
+//
+//
+//// .cards__images
+//.cards__images{
+//  overflow: hidden;
+//  position: relative;
+//  aspect-ratio: 3 / 2;
+//
+//  img{
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 100%;
+//    object-fit: cover;
+//    will-change: scale;
+//    transition: scale .6s ease;
+//  }
+//}

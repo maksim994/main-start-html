@@ -1,4 +1,5 @@
 @each $size, $value in $sizes {
+
     .mt-#{$size} {
       margin-top: $value;
     }
@@ -67,10 +68,18 @@
   }
 }
 
+.m-0{
+  margin: 0;
+}
+
+.p-0{
+  padding: 0;
+}
+
 .gap-4{ gap: 4px; }
 .gap-8{ gap: 8px; }
 .gap-10{ gap: 10px; }
 .gap-12{ gap: 12px; }
 .gap-14{ gap: 14px; }
 .gap-16{ gap: 16px; }
-.gap{ gap: var(--m-gap); }
+.gap{ gap: var(--gap); }
