@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'grid';
+@import 'label';
 @import 'typograf';
 @import 'flex';
 @import 'forms';
@@ -12,7 +13,7 @@
 @import 'pagination';
 @import 'breadcrumb';
 @import 'table';
-@import 'label';
+
 @import 'modal';
 @import 'filter';
 @import 'accordion';
@@ -25,7 +26,7 @@
 @import 'shadow';
 @import 'border-radius';
 @import 'drop-down-box';
-
+@import "images-switch";
 
 .hr-line {
   margin: 20px 0;

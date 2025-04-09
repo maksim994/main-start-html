@@ -1,7 +1,10 @@
 .btn{
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: em(8);
+
+  min-height: em(48);
 
   padding: em(10) em(16);
   color: var(--black);
@@ -24,6 +27,11 @@
   &:disabled{
     color: var(--gray-20);
     cursor: not-allowed !important;
+  }
+
+  // .btn-outline
+  &.btn-outline{
+    border: 1px solid var(--gray-5);
   }
 
   .svg{
@@ -141,6 +149,12 @@
       opacity: .9;
     }
   }
+}
+
+.btn-reset{
+  padding: 0;
+  outline: none;
+  border: none;
 }
 
 

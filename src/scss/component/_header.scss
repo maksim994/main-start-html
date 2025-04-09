@@ -1,0 +1,58 @@
+.header{
+
+  // .header-nav
+  &-nav{
+    flex: 1;
+  }
+
+}
+
+// header-1
+.header-1{
+
+
+}
+
+// header 2
+.header-2{
+
+  .header-top{
+    padding: em(5) 0;
+    border-bottom: 1px solid var(--gray-10);
+  }
+
+  .header-center{
+    padding: em(10) 0;
+  }
+}
+
+
+
+.logo{
+  max-width: 370px;
+
+  // .logo-img
+  &-img{
+    max-width: 170px;
+  }
+
+  // .logo-descriptor
+  &-descriptor{
+    flex: 1;
+    font-size: 12px;
+    line-height: 1.1;
+  }
+}
+
+.nav{
+
+  //.nav-list
+  &-list{
+
+  }
+
+  // .nav-item
+  &-item{
+    
+  }
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "Возможности - Элементы"
+})
+<body>
+@include('partials/component/header.html')
+
+<main class="main">
+  <div class="wrapper">
+    <div class="topic">
+      <div class="topic__heading">
+        <h1 id="pagetitle" class="switcher-title">Элементы</h1>
+        <span class="element-count">12</span>
+      </div>
+
+    </div>
+
+    <h2>Карточки статей и новостей</h2>
+    <div class="grid-list grid-list--items-4 mb-40">
+      @include('partials/element/card-articles.html', {
+        'name': 'Здоровое питание без глютена: как выбрать и приготовить?',
+        'preview': '',
+        'src': 'https://premier-demo.ru/upload/iblock/c3d/os6fn6gr7erb2gdk1zioizm8ti4rysvw.jpg'
+      })
+
+      @include('partials/element/card-articles.html', {
+        'name': 'Комфорт и стиль: как выбрать обувь для долгих рабочих дней?',
+        'preview': '',
+        'src': 'https://premier-demo.ru/upload/iblock/b3d/8satilc9n0zzef8eyvnq7d9ijd6v8ozi.jpg'
+      })
+
+      @include('partials/element/card-articles.html', {
+        'name': 'О системах отопления',
+        'preview': '',
+        'src': 'https://webrunner.ru/img.php?w=775&h=436'
+      })
+
+      @include('partials/element/card-articles.html', {
+        'name': 'Комфорт и стиль: как выбрать обувь для долгих рабочих дней?',
+        'preview': '',
+        'src': 'https://premier-demo.ru/upload/iblock/b3d/8satilc9n0zzef8eyvnq7d9ijd6v8ozi.jpg'
+      })
+    </div>
+
+    <div class="grid-list grid-list--items-4 mb-40">
+      @include('partials/element/card-articles.html', {
+        'name': 'Здоровое питание без глютена: как выбрать и приготовить?',
+        'preview': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, in?',
+        'src': 'https://premier-demo.ru/upload/iblock/c3d/os6fn6gr7erb2gdk1zioizm8ti4rysvw.jpg'
+      })
+
+      @include('partials/element/card-articles.html', {
+        'name': 'Комфорт и стиль: как выбрать обувь для долгих рабочих дней?',
+        'preview': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, in?',
+        'src': 'https://premier-demo.ru/upload/iblock/b3d/8satilc9n0zzef8eyvnq7d9ijd6v8ozi.jpg'
+      })
+
+      @include('partials/element/card-articles.html', {
+        'name': 'О системах отопления',
+        'preview': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, in?',
+        'src': 'https://webrunner.ru/img.php?w=775&h=436'
+      })
+
+      @include('partials/element/card-articles.html', {
+        'name': 'Комфорт и стиль: как выбрать обувь для долгих рабочих дней?',
+        'preview': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, in?',
+        'src': 'https://premier-demo.ru/upload/iblock/b3d/8satilc9n0zzef8eyvnq7d9ijd6v8ozi.jpg'
+      })
+    </div>
+
+    <div class="grid-list grid-list--items-4 mb-40">
+      @include('partials/element/card-product.html', {
+        'name': 'Бежевый плащ',
+        'src': [
+          {url: 'https://kosmossite.ru/upload/resize_cache/iblock/258/500_666_2/o4plt0rzhdlpx7scueumujtvjv485u8y.webp'},
+          {url: 'https://kosmossite.ru/upload/resize_cache/iblock/df2/500_666_2/ftg48nv1x9qzbdmgo4k5ot2276hh22kr.webp'},
+          {url: 'https://kosmossite.ru/upload/resize_cache/iblock/3d6/500_666_2/huw5fedgucm2ucfsdk9sx14ae7bups8l.webp'},
+          {url: 'https://kosmossite.ru/upload/resize_cache/iblock/0f1/500_666_2/u3cu7bzn3dcwemlp6ykfg4whd2ichkzs.jpg'}
+        ],
+        'label': {
+          'sale': true,
+          'hit': true,
+          'recommend': true,
+          'new': true,
+        },
+        'sku': 'Q26A-RQTA',
+        'price': '8 745 руб.',
+        'oldPrice': '10 494 руб.'
+      })
+
+      @include('partials/element/card-product.html', {
+        'name': 'Туфли лодочки',
+        'src': [
+          {url: 'https://demo.kosmosweb.ru/upload/resize_cache/iblock/0d3/500_500_0/h3n0h798y34w8apsff5hbi53jvammj7i.png'},
+          {url: 'https://demo.kosmosweb.ru/upload/resize_cache/iblock/c84/500_500_0/4nn40276g2kryvxzpftxhjqzcrdtky6p.webp'}
+        ],
+        'label': {
+          'sale': true,
+          'hit': true,
+          'recommend': false,
+          'new': false,
+        },
+        'sku': 'Q26A-RQTA',
+        'price': '1 651 ₽ / шт',
+        'oldPrice': '2 038 ₽'
+      })
+
+      @include('partials/element/card-product.html', {
+        'name': 'Туфли',
+        'src': [
+          {url: 'https://demo.kosmosweb.ru/upload/resize_cache/iblock/a57/500_500_0/d6o7maurdmb1osd4bg1z18hlhfuape8i.webp'}
+        ],
+        'label': {
+          'sale': false,
+          'hit': false,
+          'recommend': true,
+          'new': true,
+        },
+        'sku': 'JSFB-XAUK',
+        'price': '1 651 ₽ / шт',
+        'oldPrice': '2 038 ₽'
+      })
+
+      @include('partials/element/card-product.html', {
+        'name': 'Толстовка',
+        'src': [
+          {url: 'https://demo.kosmosweb.ru/upload/iblock/7e8/b14fq70u0rroluuwbd9ogmod90vu9cvm.jpg'},
+          {url: 'https://demo.kosmosweb.ru/upload/iblock/37b/220z9use2shz5nxr7i3w0msmdxpye8o8.webp'},
+          {url: 'https://demo.kosmosweb.ru/upload/iblock/9d3/n7xavpp2gjjfoq3ork2zbazxw0bfcye8.webp'}
+        ],
+        'label': {
+          'sale': false,
+          'hit': false,
+          'recommend': false,
+          'new': false,
+        },
+        'sku': 'Q26A-RQTA',
+        'price': '8 745 руб.',
+        'oldPrice': ''
+      })
+
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+
+        <div class="counter-block-inner">
+          <div class="counter-block d-f ai-c gap-4">
+            <button class="counter-block-btn btn" counter-block-type="minus">
+              <i class="svg inline svg-inline-minus" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M18 12H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </i>
+            </button>
+
+            <input type="number" class="counter-block-input" value="1" counter-block-type="input">
+
+            <button class="counter-block-btn btn" counter-block-type="plus">
+              <i class="svg inline svg-inline-plus" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 6V12M12 12V18M12 12H18M12 12L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </i>
+            </button>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+
+<!--    <div class="row">-->
+<!--      <div class="col-4">-->
+<!--        <div class="aside aside-menu">-->
+<!--          <div class="aside-menu__head title-menu" aria-expanded="false">-->
+<!--            Каталог-->
+<!--            <i class="svg inline svg-inline-down" aria-hidden="true">-->
+<!--              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
+<!--                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />-->
+<!--              </svg>-->
+<!--            </i>-->
+<!--          </div>-->
+<!--          <div class="aside-menu__body open">-->
+<!--            <ul class="side-menu aside-block">-->
+<!--              <li class="active">-->
+<!--                <span class="link-wrapper">-->
+<!--                    <a class="dark-link top-level-link link&#45;&#45;active" href="#">Аренда спецтехники-->
+<!--                        <i class="svg inline  svg-inline-down menu-arrow " aria-hidden="true">-->
+<!--                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
+<!--                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />-->
+<!--                          </svg>-->
+<!--                        </i>-->
+<!--                    </a>-->
+<!--                    <span class="toggle_block"></span>-->
+<!--                </span>-->
+<!--                <div class="submenu-wrapper">-->
+<!--                  <ul class="submenu">-->
+<!--                    <li class="active opened">-->
+<!--                      <span class="link-wrapper ">-->
+<!--                          <a class="dark-link sublink" href="#">Автокраны</a>-->
+<!--                      </span>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                      <span class="link-wrapper">-->
+<!--                          <a class="dark-link sublink" href="#">Манипуляторы</a>-->
+<!--                      </span>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Самосвалы</a>-->
+<!--                            </span>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Экскаваторы</a>-->
+<!--                            </span>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <span class="link-wrapper ">-->
+<!--                    <a class="dark-link top-level-link" href="#">-->
+<!--                        Контроль доступа-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <span class="link-wrapper ">-->
+<!--                    <a class="dark-link top-level-link" href="#">-->
+<!--                        Манипуляторы-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <span class="link-wrapper ">-->
+<!--                    <a class="dark-link top-level-link" href="#">-->
+<!--                        Системы вентиляции-->
+<!--                        <i class="svg inline  svg-inline-down menu-arrow " aria-hidden="true">-->
+<!--                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
+<!--                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />-->
+<!--                          </svg>-->
+
+<!--                        </i>-->
+<!--                    </a>-->
+<!--                    <span class="toggle_block"></span>-->
+<!--                </span>-->
+<!--                <div class="submenu-wrapper">-->
+<!--                  <ul class="submenu">-->
+<!--                    <li class="has-child">-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Воздуховоды-->
+
+<!--                                    <i class="svg inline  svg-inline-down menu-arrow" aria-hidden="true">-->
+<!--                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
+<!--                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />-->
+<!--                                      </svg>-->
+<!--                                    </i>-->
+<!--                                </a>-->
+<!--                                <span class="toggle_block"></span>-->
+<!--                            </span>-->
+<!--                      <div class="submenu-wrapper">-->
+<!--                        <ul class="submenu">-->
+<!--                          <li>-->
+<!--                                        <span class="link-wrapper ">-->
+<!--                                            <a class="dark-link sublink" href="#">Подраздел 1</a>-->
+<!--                                        </span>-->
+<!--                          </li>-->
+<!--                          <li>-->
+<!--                                        <span class="link-wrapper ">-->
+<!--                                            <a class="dark-link sublink" href="#">Подраздел 2</a>-->
+<!--                                        </span>-->
+<!--                          </li>-->
+<!--                        </ul>-->
+<!--                      </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Комплектующие</a>-->
+<!--                            </span>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <span class="link-wrapper ">-->
+<!--                    <a class="dark-link top-level-link" href="#">-->
+<!--                        Системы безопасности-->
+<!--                        <i class="svg inline  svg-inline-down menu-arrow " aria-hidden="true">-->
+<!--                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
+<!--                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />-->
+<!--                          </svg>-->
+
+<!--                        </i>-->
+<!--                    </a>-->
+<!--                    <span class="toggle_block"></span>-->
+<!--                </span>-->
+<!--                <div class="submenu-wrapper">-->
+<!--                  <ul class="submenu">-->
+<!--                    <li>-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Видеонаблюдение</a>-->
+<!--                            </span>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Контроль доступа</a>-->
+<!--                            </span>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <span class="link-wrapper ">-->
+<!--                    <a class="dark-link top-level-link" href="/">-->
+<!--                        Стройматериалы-->
+<!--                        <i class="svg inline  svg-inline-down menu-arrow " aria-hidden="true">-->
+<!--                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
+<!--                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />-->
+<!--                          </svg>-->
+<!--                        </i>-->
+<!--                    </a>-->
+<!--                    <span class="toggle_block"></span>-->
+<!--                </span>-->
+<!--                <div class="submenu-wrapper">-->
+<!--                  <ul class="submenu">-->
+<!--                    <li>-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Газоны</a>-->
+<!--                            </span>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Изделия из ДПК</a>-->
+<!--                            </span>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Печи, камины, дымоходы</a>-->
+<!--                            </span>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                            <span class="link-wrapper ">-->
+<!--                                <a class="dark-link sublink" href="#">Черепица</a>-->
+<!--                            </span>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="col-4">-->
+
+<!--      </div>-->
+
+<!--      <div class="col-4">-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+  </div>
+</main>
+
+@include('partials/component/footer.html')
+
+</body>
+</html>

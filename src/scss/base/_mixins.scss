@@ -130,4 +130,6 @@ $vw-viewport: 1420;
 @include color('gray-10', var(--gray-10));
 @include color('gray-5', var(--gray-5));
 
+@include color('black', var(--black));
+
 @include project-classes;

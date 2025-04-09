@@ -16,6 +16,10 @@
       margin-right: $value;
     }
 
+    .p-#{$size} {
+      padding: $value;
+    }
+
     .pt-#{$size} {
       padding-top: $value;
     }

@@ -114,6 +114,13 @@ h5, .h5{
 
 }
 
+.fw{
+  // .fw-500
+  &-500{
+    font-weight: 500;
+  }
+}
+
 
 blockquote{
   margin: em(18) 0;

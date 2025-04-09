@@ -1,0 +1,312 @@
+<header class="header header-2 js-header">
+    <div class="header-top">
+        <div class="wrapper">
+            <div class="header-top__wrapper d-f ai-c jc-sb">
+                <div class="header-top__left">
+                    <div class="header-addres d-f ai-c gap-4 fs-14 color-666">
+                        <i class="svg inline  svg-inline-cart" aria-hidden="true" ><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M8.99998 17.4727C6.89061 14.3086 3.19922 10.0196 3.19922 6.32817C3.19922 3.12963 5.80144 0.527405 8.99998 0.527405C12.1985 0.527405 14.8007 3.12963 14.8007 6.32817C14.8007 10.0196 11.1094 14.3086 8.99998 17.4727Z" stroke="CurrentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.99999 8.96488C7.54618 8.96488 6.36328 7.78198 6.36328 6.32817C6.36328 4.87435 7.54618 3.69146 8.99999 3.69146C10.4538 3.69146 11.6367 4.87435 11.6367 6.32817C11.6367 7.78198 10.4538 8.96488 8.99999 8.96488Z" stroke="CurrentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></i>                        <span>Челябинск, ул. Лермонтова 21, 3 этаж, офис 4</span>
+                    </div>
+                </div>
+                <div class="header-top__right d-f ai-c m-l-0 gap-16">
+                    <div class="header-phone ">
+                        <i class="svg inline svg-inline-phone" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </i>
+                        <a href="tel:+7 (000) 111-22-33" class="dark-link">+7 (000-11) 1-22-33</a>
+                    </div>
+
+                    <a href="/personal/auth/" title="Войти">
+                        <i class="svg inline svg-inline-user" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5.12104 17.8037C7.15267 16.6554 9.4998 16 12 16C14.5002 16 16.8473 16.6554 18.879 17.8037M15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </i>
+                        Войти
+                    </a>
+
+                    <a href="#">
+                        <i class="svg inline svg-inline-cart" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 11V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V11M5 9H19L20 21H4L5 9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </i>
+                        Корзина
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-center">
+        <div class="wrapper">
+            <div class="header-center__wrapper d-f ai-c gap-16 jc-sb">
+                @include('../../base/logo.html', {
+                    'class': 'header-logo',
+                    'descriptor': true
+                })
+
+                <nav class="header-nav nav" style="width: 100px" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                    <ul class="header-list nav-list" id="more-nav" itemprop="about" itemscope="" itemtype="https://schema.org/ItemList">
+
+                        <li class="header-item nav-item header-first-link" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                            <a itemprop="url" href="/company/" class="nav-link">Компания</a>
+                            <meta itemprop="name" content="Компания">
+                            <ul itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList" class="header-list-second nav-list-secondary">
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/company/" class="nav-link">
+                                        Компания
+                                    </a>
+                                    <meta itemprop="name" content="Компания">
+                                </li>
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/company/history/" class="nav-link">
+                                        История компании
+                                    </a>
+                                    <meta itemprop="name" content="История компании">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/company/vacancy/" class="nav-link">
+                                        Вакансии
+                                    </a>
+                                    <meta itemprop="name" content="Вакансии">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/company/brands/" class="nav-link">
+                                        Производители
+                                    </a>
+                                    <meta itemprop="name" content="Производители">
+                                </li>
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/company/licenses/" class="nav-link">
+                                        Лицензии
+                                    </a>
+                                    <meta itemprop="name" content="Лицензии">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/company/requisites/" class="nav-link">
+                                        Реквизиты
+                                    </a>
+                                    <meta itemprop="name" content="Реквизиты">
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-item nav-item header-first-link" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                            <a itemprop="url" href="/product/" class="nav-link">
+                                Каталог
+                            </a>
+                            <meta itemprop="name" content="Каталог">
+                            <ul itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList" class="header-list-second nav-list-secondary">
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/product/arenda-tekhniki/" class="nav-link">
+                                        Аренда спецтехники                                    </a>
+                                    <meta itemprop="name" content="Аренда спецтехники">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/product/meditsinskoe-oborudovanie/" class="nav-link">
+                                        Медицинское оборудование                                    </a>
+                                    <meta itemprop="name" content="Медицинское оборудование">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/product/metalloprokat/" class="nav-link">
+                                        Металлопрокат                                    </a>
+                                    <meta itemprop="name" content="Металлопрокат">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/product/programmnye-produkty/" class="nav-link">
+                                        Программные продукты                                    </a>
+                                    <meta itemprop="name" content="Программные продукты">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/product/sistemy-bezopasnosti/" class="nav-link">
+                                        Системы безопасности                                    </a>
+                                    <meta itemprop="name" content="Системы безопасности">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/product/sistemy-ventilyatsii/" class="nav-link">
+                                        Системы вентиляции                                    </a>
+                                    <meta itemprop="name" content="Системы вентиляции">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/product/stroymaterialy/" class="nav-link">
+                                        Стройматериалы
+                                    </a>
+                                    <meta itemprop="name" content="Стройматериалы">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/product/dizaynerskaya-mebel/" class="nav-link">
+                                        Дизайнерская мебель
+                                    </a>
+                                    <meta itemprop="name" content="Дизайнерская мебель">
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-item nav-item header-first-link" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                            <a itemprop="url" href="/services/" class="nav-link">
+                                Услуги
+                            </a>
+                            <meta itemprop="name" content="Услуги">
+                            <ul itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList" class="header-list-second nav-list-secondary">
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/services/avtomatizatsiya/" class="nav-link">
+                                        Автоматизация                                    </a>
+                                    <meta itemprop="name" content="Автоматизация">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/services/arenda-spetstekhniki/" class="nav-link">
+                                        Аренда спецтехники                                    </a>
+                                    <meta itemprop="name" content="Аренда спецтехники">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/services/inzhenernye-sistemy/" class="nav-link">
+                                        Инженерные системы                                    </a>
+                                    <meta itemprop="name" content="Инженерные системы">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/services/metallokonstruktsii/" class="nav-link">
+                                        Металлоконструкции                                    </a>
+                                    <meta itemprop="name" content="Металлоконструкции">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/services/otdelka-fasada/" class="nav-link">
+                                        Отделка фасада                                    </a>
+                                    <meta itemprop="name" content="Отделка фасада">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/services/proektirovanie/" class="nav-link">
+                                        Проектирование                                    </a>
+                                    <meta itemprop="name" content="Проектирование">
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="header-item nav-item header-first-link" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                            <a itemprop="url" href="/where-buy/" class="nav-link">
+                                Где купить
+                            </a>
+                            <meta itemprop="name" content="Где купить">
+                        </li>
+
+                        <li class="header-item nav-item header-first-link" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                            <a itemprop="url" href="/projects/" class="nav-link">
+                                Проекты
+                            </a>
+                            <meta itemprop="name" content="Проекты">
+                        </li>
+
+                        <li class="header-item nav-item header-first-link" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                            <a itemprop="url" href="/news/" class="nav-link">
+                                Новости
+                            </a>
+                            <meta itemprop="name" content="Новости">
+                        </li>
+
+                        <li class="header-item nav-item header-first-link" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                            <a itemprop="url" href="/articles/" class="nav-link">
+                                Статьи
+                            </a>
+                            <meta itemprop="name" content="Статьи">
+                        </li>
+
+                        <li class="header-item nav-item header-first-link" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                            <a itemprop="url" href="/info/" class="nav-link">
+                                Информация
+                            </a>
+                            <meta itemprop="name" content="Информация">
+                            <ul itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList" class="header-list-second nav-list-secondary">
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/info/faq/" class="nav-link">
+                                        Вопросы и ответы                                    </a>
+                                    <meta itemprop="name" content="Вопросы и ответы">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/info/documents/" class="nav-link">
+                                        Документация                                    </a>
+                                    <meta itemprop="name" content="Документация">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/info/mediabank/" class="nav-link">
+                                        Медиабанк                                    </a>
+                                    <meta itemprop="name" content="Медиабанк">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/info/glossary/" class="nav-link">
+                                        Словарь терминов                                    </a>
+                                    <meta itemprop="name" content="Словарь терминов">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/info/step-instructions/" class="nav-link">
+                                        Пошаговые инструкции                                    </a>
+                                    <meta itemprop="name" content="Пошаговые инструкции">
+                                </li>
+
+                                <li class="header-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                                    <a itemprop="url" href="/info/webinars/" class="nav-link">
+                                        Вебинары                                    </a>
+                                    <meta itemprop="name" content="Вебинары">
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="header-item nav-item header-first-link" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                            <a itemprop="url" href="/contacts/" class="nav-link">
+                                Контакты
+                            </a>
+                            <meta itemprop="name" content="Контакты">
+                        </li>
+
+                    </ul>
+                </nav>
+                <div class="d-f ai-c gap-8">
+                    <button class="btn header-search-btn js-header-search-btn">
+                        <i class="svg inline  svg-inline-search" aria-hidden="true" ><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M17.7801 16.7197L12.6614 11.601C13.6529 10.3763 14.2498 8.82004 14.2498 7.12506C14.2498 3.1966 11.0534 0.00012207 7.12491 0.00012207C3.19645 0.00012207 0 3.19657 0 7.12503C0 11.0535 3.19648 14.25 7.12494 14.25C8.81991 14.25 10.3762 13.653 11.6009 12.6615L16.7196 17.7802C16.8658 17.9264 17.0578 17.9999 17.2498 17.9999C17.4419 17.9999 17.6339 17.9264 17.7801 17.7802C18.0733 17.487 18.0733 17.0129 17.7801 16.7197ZM7.12494 12.75C4.02296 12.75 1.5 10.227 1.5 7.12503C1.5 4.02305 4.02296 1.50008 7.12494 1.50008C10.2269 1.50008 12.7499 4.02305 12.7499 7.12503C12.7499 10.227 10.2269 12.75 7.12494 12.75Z" fill="CurrentColor"/></svg></i>                    </button>
+                    <button class="btn btn-primary js-form-btn" data-form-id="7">Подать заявку</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+
+
+
+<div class="header-search__inner d-n">
+    <div class="wrapper">
+        <form class="header-search-form d-f ai-c" action="/search/index.php">
+            <input type="search" name="q" value="" maxlength="50" class="header-search-input" placeholder="Поиск"/>
+
+            <span class="header2-search-btn search-submit">
+                <button type="submit" class="btn btn-primary" title="Найти">
+                    Найти                </button>
+            </span>
+        </form>
+    </div>
+</div>

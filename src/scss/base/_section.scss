@@ -112,10 +112,10 @@
 
 .grid-list{
   display: grid;
-  gap: var(--m-gap);
+  gap: var(--gap);
 
   @include media(sm){
-    gap: calc(var(--m-gap) /2);
+    gap: calc(var(--gap) /2);
   }
   // .grid-list--items-2
   &--items-2{
@@ -124,20 +124,31 @@
 
   // .grid-list--items-3
   &--items-3{
-    //grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    //grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
 
   // .grid-list--items-4
   &--items-4{
-    //grid-template-columns: repeat(4, 1fr);
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  // .grid-list--items-5
+  &--items-5{
+    grid-template-columns: repeat(5, 1fr);
+    //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
 }
 
 @include media(xl) {
   .grid-list-xl-items{
+
+    //.grid-list-xl-items-1
+    &-1{
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     //.grid-list-xl-items-2
     &-2{
