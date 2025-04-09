@@ -53,8 +53,23 @@
     }
   }
 
+  // .card-info
+  &-info{
+    margin-top: auto;
+
+    //.card-info-item
+    &-item{
+
+    }
+    .svg{
+      top: -1px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
   // .card-date
   &-date{
-    margin-top: auto;
+
   }
 }

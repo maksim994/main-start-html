@@ -117,6 +117,7 @@
   @include media(sm){
     gap: calc(var(--gap) /2);
   }
+
   // .grid-list--items-2
   &--items-2{
     grid-template-columns: repeat(2, 1fr);
@@ -140,56 +141,76 @@
     //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
-}
-
-@include media(xl) {
-  .grid-list-xl-items{
+  @include media(xl) {
 
     //.grid-list-xl-items-1
-    &-1{
+    &-xl-items-1{
       grid-template-columns: repeat(1, 1fr);
     }
 
     //.grid-list-xl-items-2
-    &-2{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    //.grid-list-xl-items-3
-    &-3{
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-}
-
-@include media(lg) {
-  .grid-list-lg-items{
-    // .grid-list-lg-items-3
-    &-3{
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    // .grid-list-lg-items-2
-    &-2{
+    &-xl-items-2{
       grid-template-columns: repeat(2, 1fr);
     }
 
-    // .grid-list-lg-items-1
-    &-1{
-      grid-template-columns: repeat(1, 1fr);
+    //.grid-list-xl-items-3
+    &-xl-items-3{
+      grid-template-columns: repeat(3, 1fr);
     }
   }
-}
 
-@include media(sm) {
-  .grid-list-sm-items-1{
-    grid-template-columns: repeat(1, 1fr);
+  @include media(lg) {
+    .grid-list
+    //.grid-list-lg-items-1
+    &-lg-items-1{
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    //.grid-list-lg-items-2
+    &-lg-items-2{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    //.grid-list-lg-items-3
+    &-lg-items-3{
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
-}
 
-@include media(md) {
-  .grid-list-md-items-1{
-    grid-template-columns: repeat(1, 1fr);
+  @include media(md) {
+
+    //.grid-list-md-items-1
+    &-md-items-1{
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    //.grid-list-md-items-2
+    &-md-items-2{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    //.grid-list-md-items-3
+    &-md-items-3{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include media(sm) {
+
+    //.grid-list-sm-items-1
+    &-sm-items-1{
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    //.grid-list-sm-items-2
+    &-sm-items-2{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    //.grid-list-sm-items-3
+    &-sm-items-3{
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 

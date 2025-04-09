@@ -14,7 +14,39 @@
             <p>@preview</p>
         </div>
         }
-        <time class="card-date text-xs" itemprop="datePublished" datetime="2024-07-01">01 июля 2024</time>
+
+        @if(info.times == true || info.date == true || info.eye == true){
+            <div class="card-info text-xs d-f ai-c gap-8">
+                @if(info.date == true){
+                    <time class="card-date card-info-item" itemprop="datePublished" datetime="2024-07-01">01 июля 2024</time>
+                }
+
+                @if(info.times == true){
+                    <div class="card-info-item d-f ai-c gap-4">
+                        <i class="svg inline svg-inline-time" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </i>
+                        5 мин.
+                    </div>
+                }
+                @if(info.eye == true){
+                <div class="card-info-item d-f ai-c gap-4">
+                    <i class="svg inline svg-inline-eye" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.45825 12C3.73253 7.94288 7.52281 5 12.0004 5C16.4781 5 20.2684 7.94291 21.5426 12C20.2684 16.0571 16.4781 19 12.0005 19C7.52281 19 3.73251 16.0571 2.45825 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </i>
+                    100
+                </div>
+                }
+            </div>
+        }
+
+
+
     </div>
 </div>
 

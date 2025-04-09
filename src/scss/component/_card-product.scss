@@ -42,7 +42,7 @@
     .btn{
       display: block;
       min-height: auto;
-      padding: em(8);
+      padding: em(4);
       background-color: var(--gray-5);
       .svg{
         width: em(24);
@@ -50,6 +50,13 @@
       }
 
       &:hover{
+        background-color: var(--brand-500);
+        .svg{
+          color: var(--white);
+        }
+      }
+
+      &.active{
         background-color: var(--brand-500);
         .svg{
           color: var(--white);
