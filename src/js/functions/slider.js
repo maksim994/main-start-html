@@ -1,9 +1,9 @@
 addEventListener('DOMContentLoaded', (event) => {
 
     $('.slider').each(function( index ) {
-        let sliderItems = $(this).attr('data-slider-items');
-        let sliderItemsMobile = $(this).attr('data-slider-items-mobile');
-        let sliderItemsTable = $(this).attr('data-slider-items-table');
+        let sliderItems = $(this).attr('data-slider-items') ? $(this).attr('data-slider-items') : 1;
+        let sliderItemsMobile = $(this).attr('data-slider-items-mobile') ? $(this).attr('data-slider-items-mobile') : 1;
+        let sliderItemsTable = $(this).attr('data-slider-items-table') ? $(this).attr('data-slider-items-table') : 1;
 
         let dots = $(this).attr('data-dots') ? $(this).attr('data-dots') : false ;
         let arrows = $(this).attr('data-arrows') ? $(this).attr('data-arrows') : false ;
