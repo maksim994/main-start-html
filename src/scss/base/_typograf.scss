@@ -61,6 +61,18 @@ h5, .h5{
 
 .text{
 
+  // .text-reset
+  &-reset{
+    p{
+      margin: 0;
+
+      &:not(:last-child){
+        margin-bottom: 1em;
+      }
+
+    }
+  }
+
   // .text-lg
   &-lg{
     font-size: em(18);
@@ -121,7 +133,6 @@ h5, .h5{
   }
 }
 
-
 blockquote{
   margin: em(18) 0;
   min-height: em(40);
@@ -148,7 +159,6 @@ blockquote{
   }
 }
 
-
 a{
   color: var(--brand-500);
   transition: var(--animation);
@@ -173,116 +183,3 @@ a{
     }
   }
 }
-
-/*
-
-
-b, strong {
-  color: var(--black);
-}
-
-
-
-.text {
-
-
-  // .text-white
-  &-white{
-    color: var(--white);
-  }
-
-  // .text-dark
-  &-dark{
-    color: var(--dark);
-  }
-
-  // .text-upper
-  &-upper{
-    text-transform: uppercase;
-  }
-}
-
-.switcher-title{
-  color: var(--black);
-  font-weight: 700;
-}
-
-.font-medium {
-  font-weight: 600;
-}
-
-a{
-  color: var(--brand-500);
-  transition: var(--animation);
-
-  &:hover {
-    color: var(--brand-300);
-  }
-
-  &.dark-link{
-    color: var(--black);
-
-    &:hover {
-      color: var(--brand-500);
-    }
-  }
-
-  &.white-link{
-    color: var(--white);
-
-    &:hover {
-      color: var(--brand-500);
-    }
-  }
-}
-
-.fs{
-
-  // .fs-12
-  &-12{ font-size: em(12); }
-
-  // .fs-13
-  &-13{ font-size: em(13); }
-
-  // .fs-14
-  &-14{ 
-    font-size: em(14);
-    line-height: calc(1em + 7px);
-  }
-
-  // .fs-18
-  &-18{  font-size: em(18); }
-
-  // .fs-20
-  &-20{  font-size: em(20);}
-
-  // .fs-24
-  &-24{ font-size: em(24);}
-
-}
-
-.color{
-
-  // .color-333
-  &-333{ color: var(--black); }
-
-  // .color-666
-  &-666{ color: var(--gray); }
-
-  // .color-fff
-  &-fff{ color: var(--white); }
-}
-
-.text{
-
-  p{
-    margin: 0;
-
-    &:not(:last-child){
-      margin-bottom: 1em;
-    }
-  }
-}
-
-
- */

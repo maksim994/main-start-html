@@ -19,32 +19,19 @@ $vw-viewport: 1420;
   @return math.div($size, $base) + em;
 }
 
-
-
-
-//@mixin font($size: 16px,  $line-height: 1.5px, $letter-spacing: 0, $weight: 400, $bottom: false) {
-//  margin: 0;
-//  font-weight: $weight;
-//  font-size: $size;
-//  font-family: var(--m-font-family-title);
-//  line-height: $line-height;
-//  letter-spacing: $letter-spacing;
-//  user-select: text;
-//
-//  @if $bottom {
-//    margin-bottom: $bottom;
-//  }
-//}
-
 @mixin color($name, $color) {
   .bg-#{$name} {
     background-color: $color !important;
   }
+
   .color-#{$name} {
     color: $color !important;
   }
-  .border-#{$name} {
-    border: 1px solid $color !important;
+
+  .br-#{$name} {
+    border-width: 1px;
+    border-color: $color;
+    border-style: solid;
   }
 }
 

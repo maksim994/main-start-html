@@ -2,7 +2,6 @@ addEventListener('DOMContentLoaded', (event) => {
 
     $('.slider').each(function( index ) {
         let sliderItems = $(this).attr('data-slider-items');
-
         let sliderItemsMobile = $(this).attr('data-slider-items-mobile');
         let sliderItemsTable = $(this).attr('data-slider-items-table');
 

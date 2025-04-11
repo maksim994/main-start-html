@@ -20,14 +20,6 @@
     }
   }
 
-  // .img-fit
-  &-default{
-
-    img{
-      aspect-ratio: inherit;
-    }
-  }
-
 
   // .img-round
   &-round {
@@ -40,6 +32,22 @@
       height: 100%;
     }
   }
+
+  // .img-3_2
+  &-3_2{
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 3 / 2;
+
+    img{
+      transition: var(--animation);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
 
 }
 
