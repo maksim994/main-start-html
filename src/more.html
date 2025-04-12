@@ -267,7 +267,7 @@
       <div>
         <div class="section-top mb-20">
           <p class="section-subtitle">О компании</p>
-          <h2 class="section-title">«ТехностройИндустрия»</h2>
+          <div class="section-title h3">«ТехностройИндустрия»</div>
         </div>
         <div class="text-reset">
           <p>«ТехностройИндустрия» – российский производитель металлоконструкций полного цикла с более чем 10-летним опытом работы на рынке. Мы специализируемся на проектировании, изготовлении и монтаже строительных металлоконструкций для промышленных, коммерческих и инфраструктурных объектов.</p>
@@ -292,7 +292,7 @@
         <div>
           <div class="section-top mb-20">
             <p class="section-subtitle">О компании</p>
-            <h2 class="section-title">«ТехностройИндустрия»</h2>
+            <div class="section-title h3">«ТехностройИндустрия»</div>
           </div>
           <div class="text-reset">
             <p>«ТехностройИндустрия» – российский производитель металлоконструкций полного цикла с более чем 10-летним опытом работы на рынке. Мы специализируемся на проектировании, изготовлении и монтаже строительных металлоконструкций для промышленных, коммерческих и инфраструктурных объектов.</p>
@@ -331,49 +331,65 @@
     </section>
 
     <section class="section">
-      <div class="grid-list grid-list--items-2 grid-list-md-items-1 mb-40">
-        <div>
-          <div class="section-top mb-20">
-            <p class="section-subtitle">О компании</p>
-            <h2 class="section-title">«ТехностройИндустрия»</h2>
-          </div>
-          <div class="text-reset">
-            <p>«ТехностройИндустрия» – российский производитель металлоконструкций полного цикла с более чем 10-летним опытом работы на рынке. Мы специализируемся на проектировании, изготовлении и монтаже строительных металлоконструкций для промышленных, коммерческих и инфраструктурных объектов.</p>
-            <p>За годы работы мы реализовали свыше 500 проектов: от каркасов торговых центров и складских комплексов до нестандартных архитектурных решений. Наши конструкции соответствуют ГОСТ и международным стандартам качества.</p>
-            <p>Ориентируясь на потребности клиентов, мы сочетаем проверенные технологии с инновационными подходами. Доверьтесь профессионалам – «ТехностройИндустрия» создает надежный металлофонд для вашего бизнеса!</p>
-          </div>
-          <div class="section-bottom mt-20">
-            <a href="#" class="btn btn-primary">Подробнее</a>
-          </div>
+      <div class="grid-list grid-list--items-2 grid-list-md-items-1 br-gray-10">
+        <div class="form p-32">
+          <form name="FEEDBACK" action="#" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+            <div class="form-header">
+              <div class="form-title">Оставьте заявку</div>
+            </div>
 
-        </div>
-        <div>
-          <div class="card-video rounded-md">
-            <div class="card-video-images">
-              <picture>
-                <!-- <source srcset="" type="image/webp"> -->
-                <img src="https://usp-ek.ru/uploadedFiles/catalogimages/big/izgotovlenie-metallokonstruktsij.jpg" alt="" loading="lazy">
-              </picture>
-              <div class="card-video-icons --big">
-                <i class="svg inline svg-inline-play" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M17.0885 17.0711C20.9937 13.1658 20.9937 6.83416 17.0885 2.92892C13.1832 -0.976326 6.85157 -0.976326 2.94633 2.92892C-0.958916 6.83416 -0.958916 13.1658 2.94633 17.0711C6.85157 20.9763 13.1832 20.9763 17.0885 17.0711Z" fill="currentColor"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9824 9.11047L8.23046 5.21243C8.07434 5.12238 7.89727 5.07499 7.71704 5.07501C7.53681 5.07504 7.35975 5.12248 7.20366 5.21257C7.04756 5.30266 6.9179 5.43223 6.82771 5.58827C6.73753 5.74431 6.68997 5.92133 6.68984 6.10157V13.8984C6.6888 14.0789 6.73579 14.2564 6.82599 14.4127C6.91619 14.569 7.04635 14.6985 7.20312 14.7879C7.35899 14.879 7.53627 14.927 7.71679 14.927C7.89731 14.927 8.07459 14.879 8.23046 14.7879L14.9824 10.8895C15.1385 10.7993 15.2681 10.6696 15.3581 10.5135C15.4482 10.3573 15.4956 10.1803 15.4956 10C15.4956 9.81975 15.4482 9.64267 15.3581 9.48655C15.2681 9.33043 15.1385 9.20075 14.9824 9.11055V9.11047Z" fill="white"/>
-                    <defs>
-                      <clipPath id="clip0_2025_28436">
-                        <rect width="20" height="20" fill="white"/>
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </i>
+            <div class="form_body">
+              <div class="form-control">
+                <label for="name">Ваше имя <span class="star">*</span></label>
+                <input type="text" data-sid="CLIENT_NAME" id="name" name="form_text_11" required="">
+                <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></div>
+
+              <div class="form-control">
+                <label for="phone">Контактный телефон&nbsp;<span class="star">*</span></label>
+                <input type="text" class="phone" id="phone" name="form_text_12" required="">
+              </div>
+
+              <div class="form-control">
+                <label for="comment">Ващ вопрос <span class="star">*</span></label>
+                <textarea required="" name="form_textarea_14" id="comment"></textarea>
+              </div>
+
+              <div class="licence_block">
+
+                <label class="checkbox-ios">
+                  <input type="checkbox">
+                  <span class="checkbox-ios-switch"></span>
+                  Я&nbsp;согласен на&nbsp;<a href="#" target="_blank">обработку персональных данных</a>
+                </label>
+
               </div>
             </div>
-          </div>
+            <div class="form_footer">
+              <button type="submit" class="btn btn-primary" value="submit" name="web_form_submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <div class="">
+          <picture class="img img-cover">
+            <img src="https://demo.kosmosweb.ru/upload/resize_cache/form/40e/600_600_0/ni3b4fq574exi1c0oxs028qae7rsboon.jpg" alt="">
+          </picture>
         </div>
       </div>
     </section>
 
 
+
+
+
+
+
+
+
+<!--    <div class="bx-map-view-layout bx-yandex-view-layout swipeignore">-->
+<!--    <div class="bx-yandex-view-map">-->
+<!--    <div id="maps" class="bx-yandex-map" style="width: 100%; height: 300px"></div>-->
+<!--    </div>-->
+<!--    </div>-->
 <!--    <section class="section">-->
 <!--      <div class="grid-list grid-list&#45;&#45;items-2 grid-list-md-items-1 mb-40">-->
 <!--        <div>-->
