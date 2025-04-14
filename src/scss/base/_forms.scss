@@ -292,7 +292,6 @@ input[type="search"]::-webkit-search-results-decoration {
     display: inline-block;
     height: em(18);
     line-height: em(18);
-    margin-right: 10px;
     position: relative;
     vertical-align: middle;
     user-select: none;
@@ -308,6 +307,7 @@ input[type="search"]::-webkit-search-results-decoration {
       vertical-align: top;
       background: var(--gray-10);
       transition: .2s;
+      margin-right: em(8);
 
       &:before {
         content: '';

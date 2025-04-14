@@ -35,6 +35,8 @@
     .pr-#{$size} {
       padding-right: $value;
     }
+
+
 }
 @each $breakpoint, $value in $breakpoints {
   @each $size, $value in $sizes {

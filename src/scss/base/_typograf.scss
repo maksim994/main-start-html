@@ -120,12 +120,16 @@ h5, .h5{
 
   // .text-dark
   &-dark{
-    color: var(--dark);
+    color: var(--black);
   }
 
   // .text-brand
   &-brand{
     color: var(--brand-500);
+  }
+
+  &-color-666{
+    color: var(--gray-60);
   }
 
 

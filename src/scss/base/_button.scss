@@ -50,6 +50,10 @@
     }
   }
 
+  &.btn-block{
+    width: 100%;
+  }
+
   // size
   &.btn-lg{
     padding: em(16) em(32);
