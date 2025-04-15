@@ -29,6 +29,7 @@
   // .footer-menu
   &-menu{
 
+    // .footer-menu-link
     &-link{
 
       color: var(--link-footer);
@@ -99,5 +100,10 @@
     a{
       color: var(--link-footer);
     }
+  }
+
+  // .footer-developers
+  &-developers{
+    color: var(--link-footer);
   }
 }

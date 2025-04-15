@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "Возможности - Элементы"
+})
+<body>
+@include('partials/component/header.html')
+
+<main class="main">
+
+  <div class="wrapper">
+    <div class="topic">
+      <div class="topic__heading">
+        <h1 id="pagetitle" class="switcher-title">Элементы</h1>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <h2>Footer 1 (Светлый)</h2>
+  </div>
+
+  <div class="mb-20">
+    @include('partials/component/footer/footer-1.html', {'type': '--light'})
+  </div>
+
+  <div class="wrapper">
+    <h2>Footer 1 (Темный)</h2>
+  </div>
+
+  <div class="mb-20">
+    @include('partials/component/footer/footer-1.html', {'type': '--dark'})
+  </div>
+
+  <div class="wrapper">
+    <h2>Footer 2 (Светлый)</h2>
+  </div>
+
+  <div class="mb-20">
+    @include('partials/component/footer/footer-2.html', {'type': '--light'})
+  </div>
+  <div class="wrapper">
+    <h2>Footer 2 (Темный)</h2>
+  </div>
+  <div class="mb-20">
+    @include('partials/component/footer/footer-2.html', {'type': '--dark'})
+  </div>
+
+
+
+
+
+
+</main>
+
+
+</body>
+</html>
