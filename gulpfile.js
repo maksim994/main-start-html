@@ -1,4 +1,7 @@
 const {src, dest, series, watch} = require('gulp');
+
+const isProduction = process.env.NODE_ENV === 'production';
+
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del');
@@ -255,8 +258,23 @@ const toProd = (done) => {
     done();
 };
 
+gulp.task('html-min', () => {
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('app'));
+});
+
 exports.default = series(clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont,  images, webpImages, svgSprites, watchFiles);
 exports.backend = series(clean, htmlInclude, stylesBackend, resources, resourcesFont, images, webpImages, svgSprites)
-exports.build = series(toProd, clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont, images, webpImages, svgSprites);
+//exports.build = series(toProd, clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont, images, webpImages, svgSprites);
+gulp.task('build', gulp.series(
+  'clean',
+  'scss',
+  'js',
+  'images',
+  'fonts',
+  isProduction ? 'html-min' : 'html', // Минификация HTML только в production
+  'sitemap'
+));
 exports.cache = series(cache, rewrite);
 exports.zip = zipFiles;
