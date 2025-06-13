@@ -38,3 +38,6 @@ RUN chown -R nginx:nginx /usr/share/nginx/html && \
     chmod -R 755 /usr/share/nginx/html
 
 EXPOSE 80
+
+# Добавьте эту строку в самый конец файла
+WORKDIR /usr/share/nginx/html
