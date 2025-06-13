@@ -1,23 +1,23 @@
-# Этап 1: Сборка проекта
+# Этап 1: Сборка проекта через Gulp
 FROM node:18 AS builder
 
 WORKDIR /app
 
-# 1. Копируем только файлы, необходимые для установки зависимостей
+# 1. Копируем зависимости и конфиги
 COPY package*.json ./
 COPY gulpfile.js ./
 
-# 2. Установка зависимостей (включая gulp)
+# 2. Устанавливаем зависимости
 RUN npm install --include=dev
 
-# 3. Копируем ВСЕ исходные файлы
+# 3. Копируем исходный код
 COPY . .
 
 # 4. Выполняем production-сборку
 RUN npm run build
 
 # Этап 2: Финальный образ с Nginx
-FROM nginx:1.25-alpine
+FROM nginx:1.25-alpine AS production
 
 # 1. Копируем собранные файлы из папки app
 COPY --from=builder /app/app /usr/share/nginx/html
@@ -37,7 +37,7 @@ RUN echo 'gzip on;' >> /etc/nginx/conf.d/compression.conf && \
 RUN chown -R nginx:nginx /usr/share/nginx/html && \
     chmod -R 755 /usr/share/nginx/html
 
-EXPOSE 80
-
-# Добавьте эту строку в самый конец файла
+# 5. Рабочая директория
 WORKDIR /usr/share/nginx/html
+
+EXPOSE 80
