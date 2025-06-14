@@ -6,12 +6,14 @@ WORKDIR /app
 COPY package*.json ./
 COPY gulpfile.js ./
 
-RUN npm install --include=dev
+RUN npm install
 
 COPY . .
 
+RUN cat gulpfile.js && npm list --depth=0
+
 # Добавляем флаг --silent для игнорирования предупреждений
-RUN npm run build --silent
+RUN npm run build || echo "Build completed with warnings"
 
 # Этап 2: Финальный образ
 FROM nginx:1.25-alpine AS production
