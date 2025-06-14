@@ -1,26 +1,23 @@
-# Этап 1: Сборка
-FROM node:18-alpine AS builder
+# Используем готовый образ с Gulp и Nginx
+FROM techlemur/alpine-nginx-gulp:latest
 
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
-COPY package*.json ./
-COPY gulpfile.js ./
-
-RUN npm install
-
+# Копируем исходный код
 COPY . .
 
-RUN cat gulpfile.js && npm list --depth=0
+# Устанавливаем зависимости
+RUN npm install --include=dev
 
-# Добавляем флаг --silent для игнорирования предупреждений
-RUN npm run build || echo "Build completed with warnings"
+# Выполняем сборку
+RUN gulp build --production
 
-# Этап 2: Финальный образ
-FROM nginx:1.25-alpine AS production
+# Копируем собранные файлы в папку Nginx
+RUN cp -R app/* /usr/share/nginx/html/
 
-COPY --from=builder /app/app /usr/share/nginx/html
-
-# Упрощенная конфигурация Nginx
-RUN echo 'location / { try_files $uri $uri/ /index.html; }' > /etc/nginx/conf.d/default.conf
-
+# Открываем порт 80
 EXPOSE 80
+
+# Запускаем Nginx
+CMD ["nginx", "-g", "daemon off;"]
