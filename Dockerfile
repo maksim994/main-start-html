@@ -17,7 +17,7 @@ RUN npm install --include=dev
 COPY . .
 
 # Выполняем production-сборку
-RUN npx gulp build
+RUN npx gulp build --production
 
 # Этап 2: Финальный образ (ИМЯ production ОБЯЗАТЕЛЬНО!)
 FROM nginx:1.25-alpine AS production
