@@ -1,8 +1,5 @@
 const gulp = require('gulp');
 const {src, dest, series, watch} = require('gulp');
-
-const isProduction = process.env.NODE_ENV === 'production';
-
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del');
