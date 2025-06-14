@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --production",
+    "build": "gulp build",
     "stylelint": "stylelint src/scss/**/*.scss",
     "stylelint:fix": "stylelint src/scss/**/*.scss --fix"
   },
