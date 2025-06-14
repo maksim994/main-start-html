@@ -11,7 +11,7 @@ COPY . .
 RUN npm install --include=dev
 
 # Выполняем сборку
-RUN gulp build --production
+RUN gulp build
 
 # Копируем собранные файлы в папку Nginx
 RUN cp -R app/* /usr/share/nginx/html/
