@@ -1,43 +1,17 @@
-# Этап 1: Сборка проекта через Gulp
-FROM node:18 AS builder
+#FROM node:18-alpine
+FROM --platform=linux/amd64 node:18-alpine
 
+# Обновим и установим нужные утилиты
+RUN apk add --no-cache bash git
+
+# Создаём рабочую директорию
 WORKDIR /app
 
-# 1. Копируем зависимости и конфиги
+# Копируем package.json и устанавливаем зависимости
 COPY package*.json ./
-COPY gulpfile.js ./
+RUN npm install
 
-# 2. Устанавливаем зависимости
-RUN npm install --include=dev
+# Остальной код будет монтироваться, копировать не нужно
+EXPOSE 3000
 
-# 3. Копируем исходный код
-COPY . .
-
-# 4. Выполняем production-сборку
-RUN npm run build
-
-# Этап 2: Финальный образ с Nginx
-FROM nginx:1.25-alpine AS production
-
-# 1. Копируем собранные файлы из папки app
-COPY --from=builder /app/app /usr/share/nginx/html
-
-# 2. Конфигурация для мультистраничности и SPA
-RUN echo 'index index.html;' > /etc/nginx/conf.d/default.conf && \
-    echo 'error_page 404 /404.html;' >> /etc/nginx/conf.d/default.conf && \
-    echo 'location / {' >> /etc/nginx/conf.d/default.conf && \
-    echo '  try_files $uri $uri.html $uri/ =404;' >> /etc/nginx/conf.d/default.conf && \
-    echo '}' >> /etc/nginx/conf.d/default.conf
-
-# 3. Оптимизация Nginx
-RUN echo 'gzip on;' >> /etc/nginx/conf.d/compression.conf && \
-    echo 'gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;' >> /etc/nginx/conf.d/compression.conf
-
-# 4. Права доступа
-RUN chown -R nginx:nginx /usr/share/nginx/html && \
-    chmod -R 755 /usr/share/nginx/html
-
-# 5. Рабочая директория
-WORKDIR /usr/share/nginx/html
-
-EXPOSE 80
+CMD ["npx", "gulp"]
