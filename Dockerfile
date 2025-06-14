@@ -1,17 +1,36 @@
-#FROM node:18-alpine
-FROM --platform=linux/amd64 node:18-alpine
+# Этап 1: Сборка
+FROM --platform=linux/amd64 node:18-alpine AS builder
 
-# Обновим и установим нужные утилиты
+# Установка утилит для сборки
 RUN apk add --no-cache bash git
 
-# Создаём рабочую директорию
 WORKDIR /app
 
-# Копируем package.json и устанавливаем зависимости
+# Копируем зависимости
 COPY package*.json ./
-RUN npm install
+COPY gulpfile.js ./
 
-# Остальной код будет монтироваться, копировать не нужно
-EXPOSE 3000
+# Устанавливаем зависимости
+RUN npm install --include=dev
 
-CMD ["npx", "gulp"]
+# Копируем исходный код
+COPY . .
+
+# Выполняем production-сборку
+RUN npx gulp build --production
+
+# Этап 2: Финальный образ
+FROM nginx:1.25-alpine
+
+# Копируем собранные файлы
+COPY --from=builder /app/app /usr/share/nginx/html
+
+# Оптимизированная конфигурация Nginx
+RUN echo 'location / {' > /etc/nginx/conf.d/default.conf && \
+    echo '  try_files $uri $uri/ /index.html;' >> /etc/nginx/conf.d/default.conf && \
+    echo '}' >> /etc/nginx/conf.d/default.conf
+
+# Права доступа
+RUN chown -R nginx:nginx /usr/share/nginx/html
+
+EXPOSE 80
