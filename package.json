@@ -4,13 +4,8 @@
   "description": "gulp-builder for weblayout",
   "main": "gulpfile.js",
   "scripts": {
-    "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
     "dev": "gulp",
-    "build": "gulp build --production"
-    "cache": "gulp cache",
-    "backend": "gulp backend",
-    "zip": "gulp zip",
-    "code": "editorconfig-checker",
+    "build": "gulp build --production",
     "stylelint": "stylelint src/scss/**/*.scss",
     "stylelint:fix": "stylelint src/scss/**/*.scss --fix"
   },
