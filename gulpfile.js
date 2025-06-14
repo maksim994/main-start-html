@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+console.log("Gulp version:", require('gulp').version);
 const {src, dest, series, watch} = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
