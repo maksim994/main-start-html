@@ -1,5 +1,5 @@
 # Этап 1: Сборка
-FROM --platform=linux/amd64 node:18-alpine AS builder
+FROM node:18-alpine AS builder
 
 # Установка утилит для сборки
 RUN apk add --no-cache bash git
@@ -17,10 +17,10 @@ RUN npm install --include=dev
 COPY . .
 
 # Выполняем production-сборку
-RUN npx gulp build --production
+RUN npx gulp build
 
-# Этап 2: Финальный образ
-FROM nginx:1.25-alpine
+# Этап 2: Финальный образ (ИМЯ production ОБЯЗАТЕЛЬНО!)
+FROM nginx:1.25-alpine AS production
 
 # Копируем собранные файлы
 COPY --from=builder /app/app /usr/share/nginx/html
