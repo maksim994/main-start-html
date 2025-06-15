@@ -1,26 +1,17 @@
-# Этап 1: Сборка с Node.js
-FROM node:18-alpine AS builder
+#FROM node:18-alpine
+FROM --platform=linux/amd64 node:18-alpine
 
+# Обновим и установим нужные утилиты
+RUN apk add --no-cache bash git
+
+# Создаём рабочую директорию
 WORKDIR /app
 
-# Копируем зависимости
+# Копируем package.json и устанавливаем зависимости
 COPY package*.json ./
-COPY gulpfile.js ./
+RUN npm install
 
-# Устанавливаем зависимости (без глобальной установки)
-RUN npm install --include=dev
+# Остальной код будет монтироваться, копировать не нужно
+EXPOSE 3000
 
-# Копируем исходный код
-COPY . .
-
-# Запускаем сборку через npm-скрипт
-RUN npm run build
-
-# Этап 2: Финальный образ с Nginx
-FROM nginx:1.25-alpine AS production
-
-COPY --from=builder /app/app /usr/share/nginx/html
-
-# Упрощенная конфигурация Nginx
-CMD ["nginx", "-g", "daemon off;"]
-EXPOSE 80
+CMD ["npx", "gulp"]
