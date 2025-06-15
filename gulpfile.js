@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-console.log("Gulp version:", require('gulp').version);
 const {src, dest, series, watch} = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
@@ -12,9 +11,6 @@ const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
 const fileInclude = require('gulp-file-include');
-const rev = require('gulp-rev');
-const revRewrite = require('gulp-rev-rewrite');
-const revDel = require('gulp-rev-delete-original');
 const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
@@ -23,10 +19,8 @@ const {readFileSync} = require('fs');
 const typograf = require('gulp-typograf');
 const webp = require('gulp-webp');
 const mainSass = gulpSass(sass);
-const webpackStream = require('webpack-stream');
 const plumber = require('gulp-plumber');
 const path = require('path');
-const zip = require('gulp-zip');
 const concat = require('gulp-concat');
 
 const rootFolder = path.basename(path.resolve());
@@ -87,6 +81,7 @@ const svgSprites = () => {
         .pipe(dest(paths.buildImgFolder));
 }
 
+
 // scss styles
 const styles = () => {
     return src(paths.srcScss, { sourcemaps: !isProd })
@@ -108,26 +103,6 @@ const styles = () => {
         .pipe(dest(paths.buildCssFolder, { sourcemaps: '.' }))
         .pipe(browserSync.stream());
 };
-
-// styles backend
-const stylesBackend = () => {
-    return src(paths.srcScss)
-        .pipe(plumber(
-            notify.onError({
-                title: "SCSS",
-                message: "Error: <%= error.message %>"
-            })
-        ))
-        .pipe(mainSass())
-        .pipe(autoprefixer({
-            cascade: false,
-            grid: true,
-            overrideBrowserslist: ["last 5 versions"]
-        }))
-        .pipe(dest(paths.buildCssFolder))
-        .pipe(browserSync.stream());
-};
-
 const scripts = () => {
     return src([
         `${srcFolder}/js/functions/**.js`,
@@ -140,7 +115,6 @@ const scripts = () => {
         .pipe(dest(paths.buildJsFolder))
         .pipe(browserSync.stream());
 }
-
 const jsVendors = () => {
     return src(`${srcFolder}/js/vendor/**.js`)
         // .pipe(sourcemaps.init())
@@ -150,18 +124,14 @@ const jsVendors = () => {
         .pipe(dest(paths.buildJsFolder))
         .pipe(browserSync.stream());
 }
-
-
 const resources = () => {
     return src(`${paths.resourcesFolder}/**`)
         .pipe(dest(buildFolder))
 }
-
 const resourcesFont = () => {
     return src(`${paths.resourcesFolder}/fonts/**`)
         .pipe(dest(`${paths.buildFontsFolder}`))
 }
-
 const images = () => {
     return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`])
         .pipe(gulpif(isProd, image([
@@ -175,13 +145,11 @@ const images = () => {
         ])))
         .pipe(dest(paths.buildImgFolder))
 };
-
 const webpImages = () => {
     return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
         .pipe(webp())
         .pipe(dest(paths.buildImgFolder))
 };
-
 const htmlInclude = () => {
     return src([`${srcFolder}/*.html`])
         .pipe(fileInclude({
@@ -194,7 +162,6 @@ const htmlInclude = () => {
         .pipe(dest(buildFolder))
         .pipe(browserSync.stream());
 }
-
 const watchFiles = () => {
     browserSync.init({
         server: {
@@ -214,49 +181,6 @@ const watchFiles = () => {
     watch(paths.srcSvg, svgSprites);
 }
 
-const cache = () => {
-    return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,woff2}`, {
-        base: buildFolder
-    })
-        .pipe(rev())
-        .pipe(revDel())
-        .pipe(dest(buildFolder))
-        .pipe(rev.manifest('rev.json'))
-        .pipe(dest(buildFolder));
-};
-
-const rewrite = () => {
-    const manifest = readFileSync('app/rev.json');
-    src(`${paths.buildCssFolder}/*.css`)
-        .pipe(revRewrite({
-            manifest
-        }))
-        .pipe(dest(paths.buildCssFolder));
-    return src(`${buildFolder}/**/*.html`)
-        .pipe(revRewrite({
-            manifest
-        }))
-        .pipe(dest(buildFolder));
-}
-
-const zipFiles = (done) => {
-    del.sync([`${buildFolder}/*.zip`]);
-    return src(`${buildFolder}/**/*.*`, {})
-        .pipe(plumber(
-            notify.onError({
-                title: "ZIP",
-                message: "Error: <%= error.message %>"
-            })
-        ))
-        .pipe(zip(`${rootFolder}.zip`))
-        .pipe(dest(buildFolder));
-}
-
-const toProd = (done) => {
-    isProd = true;
-    done();
-};
-
 gulp.task('html-min', () => {
   return gulp.src('src/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
@@ -264,7 +188,4 @@ gulp.task('html-min', () => {
 });
 
 exports.default = series(clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont,  images, webpImages, svgSprites, watchFiles);
-exports.backend = series(clean, htmlInclude, stylesBackend, resources, resourcesFont, images, webpImages, svgSprites)
-exports.build = series(toProd, clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont, images, webpImages, svgSprites);
-exports.cache = series(cache, rewrite);
-exports.zip = zipFiles;
+exports.build = series(clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont, images, webpImages, svgSprites);
