@@ -1,23 +1,37 @@
-# Используем готовый образ с Gulp и Nginx
-FROM techlemur/alpine-nginx-gulp:latest
+# Этап 1: Сборка с Node.js и Gulp
+FROM node:18-alpine AS builder
 
-# Устанавливаем рабочую директорию
+# Установка системных зависимостей
+RUN apk add --no-cache bash git
+
+# Установка Gulp глобально
+RUN npm install -g gulp gulp-cli
+
 WORKDIR /app
+
+# Копируем зависимости
+COPY package*.json ./
+COPY gulpfile.js ./
+
+# Устанавливаем зависимости проекта
+RUN npm install --include=dev
 
 # Копируем исходный код
 COPY . .
 
-# Устанавливаем зависимости
-RUN npm install --include=dev
-
 # Выполняем сборку
 RUN gulp build
 
-# Копируем собранные файлы в папку Nginx
-RUN cp -R app/* /usr/share/nginx/html/
+# Этап 2: Финальный образ с Nginx
+FROM nginx:1.25-alpine
 
-# Открываем порт 80
+# Копируем собранные файлы
+COPY --from=builder /app/app /usr/share/nginx/html
+
+# Базовая конфигурация Nginx
+RUN echo 'location / { try_files $uri $uri/ /index.html; }' > /etc/nginx/conf.d/default.conf
+
+# Права доступа
+RUN chown -R nginx:nginx /usr/share/nginx/html
+
 EXPOSE 80
-
-# Запускаем Nginx
-CMD ["nginx", "-g", "daemon off;"]
