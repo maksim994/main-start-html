@@ -9,7 +9,7 @@ COPY package*.json ./
 COPY gulpfile.js ./
 
 # Устанавливаем зависимости проекта
-RUN npm install --include=dev
+RUN npm install
 
 # Копируем исходный код
 COPY . .
