@@ -15,7 +15,7 @@ RUN npm install
 COPY . .
 
 # Выполняем сборку
-RUN gulp build
+RUN npm run build
 
 # Этап 2: Финальный образ с Nginx
 FROM nginx:1.25-alpine
