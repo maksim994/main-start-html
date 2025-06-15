@@ -5,9 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build",
-    "stylelint": "stylelint src/scss/**/*.scss",
-    "stylelint:fix": "stylelint src/scss/**/*.scss --fix"
+    "build": "gulp build"
   },
   "author": "MaxGraph",
   "license": "ISC",
@@ -38,8 +36,6 @@
     "gulp-svgmin": "^4.1.0",
     "gulp-typograf": "^4.0.3",
     "gulp-webp": "^4.0.1",
-    "gulp-zip": "^5.1.0",
-    "node-w3c-validator": "^2.0.1",
     "postcss": "^8.4.5",
     "postcss-scss": "^4.0.2",
     "sass": "^1.45.1",
