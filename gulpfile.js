@@ -265,15 +265,6 @@ gulp.task('html-min', () => {
 
 exports.default = series(clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont,  images, webpImages, svgSprites, watchFiles);
 exports.backend = series(clean, htmlInclude, stylesBackend, resources, resourcesFont, images, webpImages, svgSprites)
-//exports.build = series(toProd, clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont, images, webpImages, svgSprites);
-gulp.task('build', gulp.series(
-  'clean',
-  'scss',
-  'js',
-  'images',
-  'fonts',
-  isProduction ? 'html-min' : 'html', // Минификация HTML только в production
-  'sitemap'
-));
+exports.build = series(toProd, clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont, images, webpImages, svgSprites);
 exports.cache = series(cache, rewrite);
 exports.zip = zipFiles;
