@@ -48,8 +48,5 @@
   },
   "dependencies": {
     "gulp-concat": "^2.6.1"
-  },
-  "engines": {
-    "node": "14.x"
   }
 }
