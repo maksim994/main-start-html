@@ -1,5 +1,10 @@
 .logo{
 
+  // .logo-link
+  &-link{
+    line-height: 1;
+  }
+
   // .logo-descriptor
   &-descriptor{
     line-height: 1.1;
@@ -8,6 +13,7 @@
 
 
 @import "./header/header2";
+@import "./header/header3";
 
 //.header{
 //

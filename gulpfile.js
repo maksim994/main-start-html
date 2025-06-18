@@ -22,7 +22,6 @@ const mainSass = gulpSass(sass);
 const plumber = require('gulp-plumber');
 const path = require('path');
 const concat = require('gulp-concat');
-
 const rootFolder = path.basename(path.resolve());
 
 // paths
@@ -189,3 +188,4 @@ gulp.task('html-min', () => {
 
 exports.default = series(clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont,  images, webpImages, svgSprites, watchFiles);
 exports.build = series(clean, htmlInclude, jsVendors, scripts, styles, resources, resourcesFont, images, webpImages, svgSprites);
+
