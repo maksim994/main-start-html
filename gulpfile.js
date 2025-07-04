@@ -80,7 +80,6 @@ const svgSprites = () => {
         .pipe(dest(paths.buildImgFolder));
 }
 
-
 // scss styles
 const styles = () => {
     return src(paths.srcScss, { sourcemaps: !isProd })

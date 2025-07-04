@@ -220,7 +220,8 @@
 }
 
 .topic{
-  margin-bottom: 32px;
+  margin-top: em(32);
+  margin-bottom: em(32);
 
   // .topic__heading
   &__heading{

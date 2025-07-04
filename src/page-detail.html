@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+  "title": "Блог"
+})
+<body>
+
+@include('partials/component/header.html')
+
+<main class="main">
+  <div class="wrapper">
+
+    <div class="topic">
+      <div class="topic__heading">
+        <h1 id="pagetitle" class="switcher-title">Расширяем границы — новый филиал в Москве</h1>
+      </div>
+    </div>
+
+    <div class="wrapper-content">
+        <div class="right_block">
+            <div class="detail-block d-f fd-c gap">
+                <div class="detail-block-top d-f fd-c gap-8">
+                    <div class="detail-block images">
+                        <picture class="img">
+                            <img src="https://corporate.hubsup.ru/upload/iblock/e4a/rpwieq2tudqzgmiaq9spy9er41purzgf.jpg" alt="Дизельные генераторы">
+                        </picture>
+                    </div>
+
+                    <div class="detail-block info d-f ai-c gap-16 fs-14">
+                        <span class="label label-primary"><a href="#">Общие новости</a></span>
+                        <div class="news-detail__date">01.01.2019</div>
+                    </div>
+                </div>
+
+                <div class="detail-block text">
+                    <p>Приходите на&nbsp;открытие нашего филиала в&nbsp;Москве&nbsp;— будут подарки, карты постоянных клиентов и&nbsp;много сладостей. Новые амбициозные руководители ответят на&nbsp;все вопросы клиентов и&nbsp;расскажут интересные истории о&nbsp;жизни компании. Приходите и&nbsp;получайте удовольствие!</p>
+                    <p>Филиал открывается по&nbsp;адресу: г.&nbsp;Москва, пр.&nbsp;Пушкина, д.&nbsp;1</p>
+
+                    <h3>Как принять участие в&nbsp;конкурсе?</h3>
+
+                    <ul>
+                        <li>Закажите дизайн интерьера в&nbsp;компании Allcorp3 с&nbsp;25&nbsp;февраля по&nbsp;25&nbsp;апреля.</li>
+                        <li>Пришлите итоговый вариант на&nbsp;нашу электронную почту.</li>
+                        <li>Следите за&nbsp;итогами розыгрыша&nbsp;— уже 15&nbsp;мая объявим победителей!</li>
+                    </ul>
+
+                    <p>P.&nbsp;S. Советуем поторопиться, количество мест на&nbsp;услугу ограничено. Желаем всем участникам удачи!</p>
+
+                    <ol>
+                        <li>Закажите дизайн интерьера в&nbsp;компании Allcorp3 с&nbsp;25&nbsp;февраля по&nbsp;25&nbsp;апреля.</li>
+                        <li>Пришлите итоговый вариант на&nbsp;нашу электронную почту.</li>
+                        <li>Следите за&nbsp;итогами розыгрыша&nbsp;— уже 15&nbsp;мая объявим победителей!</li>
+                    </ol>
+
+
+                    <blockquote>
+                        Смена корпоративных цветов компании и&nbsp;запуск нового сайта подтолкнула нашу команду к&nbsp;идее поменять стиль одежды сотрудников. Месяц поисков идеального решения, консультаций с&nbsp;ателье и&nbsp;бесконечных пожеланий сотрудников. И&nbsp;сегодня мы&nbsp;готовы представить новый корпоративный стиль Allcorp3&nbsp;— серьезный, но&nbsp;притягивающий взгляд.<small>Владислав Мордвин, <cite title="бренд-менеджер Allcorp3">бренд-менеджер Allcorp3</cite></small>
+                    </blockquote>
+                </div>
+
+                <div class="detail-block product">
+                    <div class="detail-block-title h3">Продукты</div>
+
+                    <div class="slider" data-slider-items="3" data-slider-items-table="2" data-slider-items-mobile="1" data-dots="true" data-arrows="true">
+                        <div class="items">
+                            @include('partials/element/card-product.html', {
+                            'name': 'Бежевый плащ',
+                            'src': [
+                            {url: 'https://kosmossite.ru/upload/resize_cache/iblock/258/500_666_2/o4plt0rzhdlpx7scueumujtvjv485u8y.webp'},
+                            {url: 'https://kosmossite.ru/upload/resize_cache/iblock/df2/500_666_2/ftg48nv1x9qzbdmgo4k5ot2276hh22kr.webp'},
+                            {url: 'https://kosmossite.ru/upload/resize_cache/iblock/3d6/500_666_2/huw5fedgucm2ucfsdk9sx14ae7bups8l.webp'},
+                            {url: 'https://kosmossite.ru/upload/resize_cache/iblock/0f1/500_666_2/u3cu7bzn3dcwemlp6ykfg4whd2ichkzs.jpg'}
+                            ],
+                            'label': {
+                            'sale': true,
+                            'hit': true,
+                            'recommend': true,
+                            'new': true,
+                            },
+                            'sku': 'Q26A-RQTA',
+                            'price': '8 745 руб.',
+                            'oldPrice': '10 494 руб.'
+                            })
+                        </div>
+
+                        <div class="items">
+                            @include('partials/element/card-product.html', {
+                            'name': 'Бежевый плащ',
+                            'src': [
+                            {url: 'https://kosmossite.ru/upload/resize_cache/iblock/258/500_666_2/o4plt0rzhdlpx7scueumujtvjv485u8y.webp'},
+                            {url: 'https://kosmossite.ru/upload/resize_cache/iblock/df2/500_666_2/ftg48nv1x9qzbdmgo4k5ot2276hh22kr.webp'},
+                            {url: 'https://kosmossite.ru/upload/resize_cache/iblock/3d6/500_666_2/huw5fedgucm2ucfsdk9sx14ae7bups8l.webp'},
+                            {url: 'https://kosmossite.ru/upload/resize_cache/iblock/0f1/500_666_2/u3cu7bzn3dcwemlp6ykfg4whd2ichkzs.jpg'}
+                            ],
+                            'label': {
+                            'sale': true,
+                            'hit': true,
+                            'recommend': true,
+                            'new': true,
+                            },
+                            'sku': 'Q26A-RQTA',
+                            'price': '8 745 руб.',
+                            'oldPrice': '10 494 руб.'
+                            })
+                        </div>
+
+                        <div class="items">
+                            @include('partials/element/card-product.html', {
+                            'name': 'Туфли лодочки',
+                            'src': [
+                                {url: 'https://demo.kosmosweb.ru/upload/resize_cache/iblock/0d3/500_500_0/h3n0h798y34w8apsff5hbi53jvammj7i.png'},
+                                {url: 'https://demo.kosmosweb.ru/upload/resize_cache/iblock/c84/500_500_0/4nn40276g2kryvxzpftxhjqzcrdtky6p.webp'}
+                            ],
+                            'label': {
+                                'sale': false,
+                                'hit': true,
+                                'recommend': false,
+                                'new': false,
+                            },
+                            'sku': 'Q26A-RQTA',
+                            'price': '1 651 ₽ / шт',
+                            'oldPrice': '2 038 ₽'
+                            })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-block faq">
+                    <div class="detail-block-title h3">Вопросы-ответы</div>
+
+                    @include('partials/component/accordion.html', {
+                    'txt': [
+                        {
+                            'title': 'Цена вопроса не важна, когда солнечных дней всё меньше',
+                            'text': '<p>Современные технологии достигли такого уровня, что современная методология разработки позволяет оценить значение прогресса профессионального сообщества. Как принято считать, сторонники тоталитаризма в науке, инициированные исключительно синтетически, ограничены исключительно образом мышления. А ещё стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть описаны максимально подробно.</p>'
+                        },
+
+                        {
+                            'title': 'Граница обучения кадров станет частью наших традиций',
+                            'text': '<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что предприниматели в сети интернет могут быть призваны к ответу! Банальные, но неопровержимые выводы, а также акционеры крупнейших компаний неоднозначны и будут призваны к ответу. А также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть разоблачены.</p>'
+                        },
+
+                        {
+                            'title': 'Допустим, героям были возданы соответствующие почести',
+                            'text': '<p>Лишь непосредственные участники технического прогресса, вне зависимости от их уровня, должны быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Не следует, однако, забывать, что экономическая повестка сегодняшнего дня в значительной степени обусловливает важность анализа существующих паттернов поведения! Идейные соображения высшего порядка, а также сложившаяся структура организации предопределяет высокую востребованность инновационных методов управления процессами.</p>'
+                        },
+                    ]
+                    })
+                </div>
+            </div>
+        </div>
+        <aside class="left_block d-lg-n order-2">
+            <div class="aside-scroll-block">
+                <ul class="side-menu aside-block">
+                    <li class="active opened">
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/" class="dark-link switcher-title top-level-link link--active link-with-flag" aria-current="page">Компания</a>
+                </span>
+                    </li>
+
+                    <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/history/" class="dark-link top-level-link  link-with-flag">История компании</a>
+                </span>
+                    </li>
+
+                    <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/vacancy/" class="dark-link top-level-link  link-with-flag">Вакансии</a>
+                </span>
+                    </li>
+
+                    <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/brands/" class="dark-link top-level-link  link-with-flag">Производители</a>
+                </span>
+                    </li>
+
+                    <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/licenses/" class="dark-link top-level-link  link-with-flag">Лицензии</a>
+                </span>
+                    </li>
+
+                    <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/requisites/" class="dark-link top-level-link  link-with-flag">Реквизиты</a>
+                </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-20">
+                <div class="tags d-f fw-w gap-8">
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">1С-Битрикс</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">CRM</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">jivo</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">арматура</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">видео</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">дизайн</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">интерьер</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">магазин</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">Мотивация</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">онлайн&nbsp;консультант</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">покупка</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">Рассылки</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">строительство</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">техника</a>
+                    <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">Управление</a>
+                </div>
+            </div>
+
+            <div class="mt-20 ask-block rounded-md d-f fd-c ai-c gap br-gray-10 p-20">
+                <div class="ask-block__icons d-f jc-c w-100">
+                    <i class="svg inline icons icons-64 icons-color-thems " aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+                            <path d="M5.66628 14.4302H13.0329C13.1832 14.4302 13.3274 14.3705 13.4336 14.2642C13.5399 14.158 13.5996 14.0138 13.5996 13.8635C13.5996 13.7133 13.5399 13.5691 13.4336 13.4628C13.3274 13.3566 13.1832 13.2969 13.0329 13.2969H5.66628C5.51599 13.2969 5.37185 13.3566 5.26558 13.4628C5.15931 13.5691 5.09961 13.7133 5.09961 13.8635C5.09961 14.0138 5.15931 14.158 5.26558 14.2642C5.37185 14.3705 5.51599 14.4302 5.66628 14.4302ZM20.3996 16.6969H5.66628C5.51599 16.6969 5.37185 16.7566 5.26558 16.8628C5.15931 16.9691 5.09961 17.1133 5.09961 17.2635C5.09961 17.4138 5.15931 17.558 5.26558 17.6642C5.37185 17.7705 5.51599 17.8302 5.66628 17.8302H20.3996C20.5499 17.8302 20.694 17.7705 20.8003 17.6642C20.9066 17.558 20.9663 17.4138 20.9663 17.2635C20.9663 17.1133 20.9066 16.9691 20.8003 16.8628C20.694 16.7566 20.5499 16.6969 20.3996 16.6969ZM20.3996 20.0969H5.66628C5.51599 20.0969 5.37185 20.1566 5.26558 20.2628C5.15931 20.3691 5.09961 20.5133 5.09961 20.6635C5.09961 20.8138 5.15931 20.958 5.26558 21.0642C5.37185 21.1705 5.51599 21.2302 5.66628 21.2302H20.3996C20.5499 21.2302 20.694 21.1705 20.8003 21.0642C20.9066 20.958 20.9663 20.8138 20.9663 20.6635C20.9663 20.5133 20.9066 20.3691 20.8003 20.2628C20.694 20.1566 20.5499 20.0969 20.3996 20.0969Z" fill="CurrentColor"></path>
+                            <path d="M30.6408 1.43652L11.2937 1.39685C9.44067 1.39685 7.93333 2.90418 7.93333 4.75718V7.66078L3.36033 7.67042C1.50733 7.67042 0 9.17775 0 11.0308V23.0106C0 24.8636 1.50733 26.3704 3.36033 26.3704H6.8V32.0371C6.79995 32.1515 6.83453 32.2632 6.89919 32.3576C6.96385 32.452 7.05555 32.5245 7.16225 32.5658C7.26894 32.6071 7.38563 32.6151 7.49696 32.5888C7.60829 32.5625 7.70906 32.5031 7.786 32.4185L13.2849 26.3693L22.7063 26.3308C24.5593 26.3308 26.0667 24.8234 26.0667 22.971V22.907L29.0473 26.1857C29.1245 26.2697 29.2253 26.3286 29.3364 26.3545C29.4475 26.3805 29.5639 26.3724 29.6704 26.3312C29.7768 26.29 29.8684 26.2177 29.9331 26.1237C29.9979 26.0298 30.0328 25.9184 30.0333 25.8043V20.1376H30.6397C32.4927 20.1376 34 18.6303 34 16.7779V4.79685C33.999 3.90615 33.6447 3.05222 33.015 2.4223C32.3853 1.79237 31.5315 1.43787 30.6408 1.43652ZM24.9333 22.9704C24.9326 23.5612 24.6974 24.1275 24.2794 24.5449C23.8614 24.9624 23.2948 25.1969 22.7041 25.1969L13.0311 25.2365C12.9525 25.2368 12.8749 25.2534 12.8031 25.2853C12.7313 25.3172 12.6669 25.3637 12.614 25.4218L7.93333 30.5711V25.8032C7.93333 25.6529 7.87363 25.5088 7.76736 25.4025C7.66109 25.2962 7.51696 25.2365 7.36667 25.2365H3.36033C2.76998 25.2359 2.20397 25.0012 1.78647 24.5838C1.36897 24.1664 1.13408 23.6004 1.13333 23.0101V11.0302C1.13408 10.4396 1.36911 9.8734 1.78684 9.45589C2.20456 9.03837 2.77086 8.80363 3.36147 8.80318L8.5 8.79242H8.50113L22.7063 8.76295C23.2968 8.76355 23.8629 8.99837 24.2804 9.41589C24.6979 9.8334 24.9327 10.3995 24.9333 10.9899V22.9704ZM32.8667 16.7768C32.8659 17.3671 32.631 17.9331 32.2135 18.3504C31.796 18.7678 31.23 19.0026 30.6397 19.0032H29.4667C29.3164 19.0032 29.1722 19.0629 29.066 19.1692C28.9597 19.2754 28.9 19.4196 28.9 19.5699V24.3378L26.0667 21.2211V10.9905C26.0667 9.13752 24.5593 7.63018 22.7052 7.63018L9.06667 7.65795V4.75662C9.06727 4.16636 9.30193 3.60043 9.7192 3.18295C10.1365 2.76547 10.7023 2.53052 11.2925 2.52962L30.6391 2.56928H30.6402C31.2307 2.56988 31.7968 2.80471 32.2143 3.22222C32.6318 3.63973 32.8666 4.20583 32.8672 4.79628L32.8667 16.7768Z" fill="CurrentColor"></path>
+                        </svg>
+                    </i>
+                </div>
+                <div class="ask-block__inner text-center d-f fd-c gap-10">
+                    <div class="ask-block__title h5 m-0">Не&nbsp;нашли ответ?</div>
+                    <div class="ask-block__text text-sm">Наши специалисты ответят на&nbsp;любой интересующий вопрос</div>
+                    <div class="ask-block__btn d-f ai-c jc-c">
+                        <button class="btn btn-primary btn-block">Задать вопрос</button>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+  </div>
+</main>
+
+@include('partials/component/footer.html')
+</body>
+</html>

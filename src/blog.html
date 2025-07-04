@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+  "title": "Блог"
+})
+<body>
+
+@include('partials/component/header.html')
+
+<main class="main">
+  <div class="wrapper">
+
+    <div class="topic">
+      <div class="topic__heading">
+        <h1 id="pagetitle" class="switcher-title">Блог</h1>
+      </div>
+    </div>
+
+    <div class="wrapper-content">
+      <aside class="left_block d-lg-n">
+        <div class="aside-scroll-block">
+          <ul class="side-menu aside-block">
+            <li class="active opened">
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/" class="dark-link switcher-title top-level-link link--active link-with-flag" aria-current="page">Компания</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/history/" class="dark-link top-level-link  link-with-flag">История компании</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/vacancy/" class="dark-link top-level-link  link-with-flag">Вакансии</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/brands/" class="dark-link top-level-link  link-with-flag">Производители</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/licenses/" class="dark-link top-level-link  link-with-flag">Лицензии</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/requisites/" class="dark-link top-level-link  link-with-flag">Реквизиты</a>
+                </span>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-20">
+            <div class="tags d-f fw-w gap-8">
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">1С-Битрикс</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">CRM</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">jivo</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">арматура</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">видео</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">дизайн</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">интерьер</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">магазин</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">Мотивация</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">онлайн&nbsp;консультант</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">покупка</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">Рассылки</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">строительство</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">техника</a>
+                <a href="#" rel="nofollow" class="dark-link text-sm rounded-md">Управление</a>
+            </div>
+        </div>
+
+      </aside>
+
+      <div class="right_block">
+          <div class="grid-list grid-list--items-3 grid-list-xl-items-3 grid-list-md-items-2 grid-list-sm-items-1 mb-40">
+              @include('partials/element/card-articles.html', {
+                  'name': 'Здоровое питание без глютена: как выбрать и приготовить?',
+                  'preview': '',
+                  'src': 'https://premier-demo.ru/upload/iblock/c3d/os6fn6gr7erb2gdk1zioizm8ti4rysvw.jpg',
+                  'info': {
+                      'date': true,
+                      'times': true,
+                      'eye': true
+                }
+              })
+
+              @include('partials/element/card-articles.html', {
+                  'name': 'Комфорт и стиль: как выбрать обувь для долгих рабочих дней?',
+                  'preview': '',
+                  'src': 'https://premier-demo.ru/upload/iblock/b3d/8satilc9n0zzef8eyvnq7d9ijd6v8ozi.jpg',
+                  'info': {
+                      'date': true,
+                      'times': true,
+                      'eye': true
+                  }
+              })
+
+              @include('partials/element/card-articles.html', {
+                  'name': 'О системах отопления',
+                  'preview': '',
+                  'src': 'https://webrunner.ru/img.php?w=775&h=436',
+                  'info': {
+                      'date': true,
+                      'times': true,
+                      'eye': true
+                  }
+              })
+
+              @include('partials/element/card-articles.html', {
+                  'name': 'Комфорт и стиль: как выбрать обувь для долгих рабочих дней?',
+                  'preview': '',
+                  'src': 'https://premier-demo.ru/upload/iblock/b3d/8satilc9n0zzef8eyvnq7d9ijd6v8ozi.jpg',
+                  'info': {
+                      'date': true,
+                      'times': true,
+                      'eye': true
+                  }
+              })
+              @include('partials/element/card-articles.html', {
+              'name': 'Комфорт и стиль: как выбрать обувь для долгих рабочих дней?',
+              'preview': '',
+              'src': 'https://premier-demo.ru/upload/iblock/b3d/8satilc9n0zzef8eyvnq7d9ijd6v8ozi.jpg',
+              'info': {
+              'date': true,
+              'times': true,
+              'eye': true
+              }
+              })
+
+              @include('partials/element/card-articles.html', {
+              'name': 'О системах отопления',
+              'preview': '',
+              'src': 'https://webrunner.ru/img.php?w=775&h=436',
+              'info': {
+              'date': true,
+              'times': true,
+              'eye': true
+              }
+              })
+
+              @include('partials/element/card-articles.html', {
+              'name': 'Комфорт и стиль: как выбрать обувь для долгих рабочих дней?',
+              'preview': '',
+              'src': 'https://premier-demo.ru/upload/iblock/b3d/8satilc9n0zzef8eyvnq7d9ijd6v8ozi.jpg',
+              'info': {
+              'date': true,
+              'times': true,
+              'eye': true
+              }
+              })
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+@include('partials/component/footer.html')
+</body>
+</html>

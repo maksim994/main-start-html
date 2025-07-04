@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+  "title": "Список страниц"
+})
+<body>
+
+@include('partials/component/header.html')
+
+<main class="main">
+  <div class="wrapper">
+
+    <div class="topic">
+      <div class="topic__heading">
+        <h1 id="pagetitle" class="switcher-title">Элементы</h1>
+        <span class="element-count">12</span>
+      </div>
+    </div>
+
+    <div class="wrapper-content">
+      <aside class="left_block d-lg-n">
+        <div class="aside-scroll-block">
+          <ul class="side-menu aside-block">
+            <li class="active opened">
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/" class="dark-link switcher-title top-level-link link--active link-with-flag" aria-current="page">Компания</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/history/" class="dark-link top-level-link  link-with-flag">История компании</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/vacancy/" class="dark-link top-level-link  link-with-flag">Вакансии</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/brands/" class="dark-link top-level-link  link-with-flag">Производители</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/licenses/" class="dark-link top-level-link  link-with-flag">Лицензии</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/requisites/" class="dark-link top-level-link  link-with-flag">Реквизиты</a>
+                </span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="right_block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi explicabo harum inventore labore laborum praesentium quisquam similique? Illum non sequi totam. Asperiores corporis eos eum excepturi officiis praesentium recusandae. Adipisci aliquam animi aperiam beatae, cupiditate deserunt eaque eius est ipsa iusto magnam maiores minus modi molestias nesciunt officiis perferendis possimus quae quas qui quia repudiandae similique sint tempora unde vel vero voluptas. A aperiam asperiores aut autem consequuntur debitis distinctio dolorem dolores eos eum fugiat hic ipsam ipsum iusto laudantium mollitia nisi non odio officia, officiis perspiciatis quas quis quo quod recusandae similique sit ullam unde veniam veritatis? At aut cumque in laborum molestias quo, voluptatem? Accusamus aut commodi consequatur dolores, eius error laboriosam modi similique, soluta suscipit unde velit voluptas. Autem fugiat iure maxime minus pariatur? A aliquam, distinctio eligendi error et ex, expedita facere facilis fuga fugiat illum in inventore laboriosam libero nemo odio odit perspiciatis porro quaerat ratione rerum, similique suscipit tempore totam voluptatum! Alias aliquid cupiditate delectus dolorem, ducimus, earum enim ex excepturi illo labore nobis officia porro sunt. A amet ducimus esse illo minus numquam praesentium quaerat quis recusandae sequi, voluptates voluptatibus voluptatum! Dignissimos doloribus eaque eveniet minus? Architecto deleniti excepturi inventore omnis. Odio, perferendis?</p>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+@include('partials/component/footer.html')
+</body>
+</html>

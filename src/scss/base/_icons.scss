@@ -52,6 +52,11 @@
     height: em(48);
   }
 
+  &.icons-64{
+    width: em(64);
+    height: em(64);
+  }
+
   .svg, svg{
     width: 100%;
     height: 100%;

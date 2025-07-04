@@ -16,7 +16,9 @@
   &-images{
     overflow: hidden;
     position: relative;
-    aspect-ratio: 3 / 4;
+    //aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
+    max-height: em(300);
 
     img{
       transition: var(--animation);

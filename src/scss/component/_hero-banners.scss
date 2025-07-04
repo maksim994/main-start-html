@@ -1,0 +1,155 @@
+.hero-banners{
+  // .hero-banners-wrapper
+  &-wrapper{
+    width: 100%;
+
+    .slick-slide{ margin: 0 }
+    .slick-prev{ left: 20px }
+    .slick-next{ right: 20px }
+
+    &.--small-left{
+      display: flex;
+      gap: em(8);
+      height: 600px;
+
+      .slick-next,
+      .slick-prev{
+        top: auto;
+        bottom: em(20);
+      }
+
+      .slick-prev{ left: inherit; right: 65px; }
+      .slick-next{ right: 20px }
+
+
+
+      .hero-banners-small{
+        width: 400px;
+      }
+    }
+  }
+  // .hero-banners-big
+  &-big{
+    flex: 1;
+    min-width: 0;
+  }
+
+  // .hero-banners-item
+  &-item{
+    height: 600px;
+    position: relative;
+  }
+
+  // .hero-banners-images
+  &-images{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    video{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .hero-banners-inner
+  &-inner{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    &.--black{
+      color: var(--black);
+    }
+
+    &.--white{
+      color: var(--white);
+    }
+  }
+  // .hero-banners-content
+  &-content{
+    max-width: 600px;
+    color: inherit;
+  }
+
+  // .hero-banners-images
+
+  // .hero-banners-title
+  &-title{
+    color: inherit;
+  }
+  // .hero-banners-text
+  &-text{
+    color: inherit;
+  }
+  // .hero-banners-btn
+  &-btn{
+
+
+  }
+
+  // .hero-banners-small
+  &-small{
+
+    // .hero-banners-small-item
+    &-item{
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+
+      &[onclick] {
+        cursor: pointer;
+      }
+
+      &:hover{
+        .hero-banners-small-images img{
+            scale: 1.1;
+        }
+      }
+    }
+
+    // .hero-banners-small-images
+    &-images{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      img{
+        transition: var(--animation);
+      }
+    }
+
+    // .hero-banners-small-inner
+    &-inner{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      z-index: 2;
+
+      &.--black{
+        color: var(--black);
+      }
+
+      &.--white{
+        color: var(--white);
+      }
+    }
+
+    // .hero-banners-small-label
+    &-label{
+      color: inherit;
+      opacity: .6;
+    }
+
+    // .hero-banners-small-title
+    &-title{
+      color: inherit;
+    }
+  }
+
+}

@@ -157,3 +157,28 @@ $width: calc(100% / $columns-count);
     @include project-classes($breakpoint);
   }
 }
+
+.wrapper-content{
+  display: flex;
+  flex-direction: row;
+
+  .left_block{
+    width: em(304);
+    flex-shrink: 0;
+    padding-right: var(--gap);
+  }
+
+  .right_block+.left_block{
+    padding-right: 0;
+    padding-left: var(--gap);
+  }
+
+  .right_block{
+    width: 100%;
+    min-width: 0;
+
+    >p{
+      margin-top: 0;
+    }
+  }
+}

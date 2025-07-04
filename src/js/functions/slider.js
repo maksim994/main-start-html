@@ -8,6 +8,10 @@ addEventListener('DOMContentLoaded', (event) => {
         let dots = $(this).attr('data-dots') ? $(this).attr('data-dots') : false ;
         let arrows = $(this).attr('data-arrows') ? $(this).attr('data-arrows') : false ;
 
+        let autoplaySpeed = $(this).attr('data-autoplaySpeed') ? $(this).attr('data-autoplaySpeed') : 0 ;
+        let autoplay = $(this).attr('data-autoplay') ? $(this).attr('data-autoplay') : false ;
+
+
 
         if ( $(this).find('.items').length >= sliderItems) {
             $(this).slick({
@@ -16,6 +20,8 @@ addEventListener('DOMContentLoaded', (event) => {
                 arrows: $.parseJSON(arrows),
                 slidesToShow: sliderItems,
                 slidesToScroll: 1,
+                autoplay: autoplay,
+                autoplaySpeed: autoplaySpeed,
                 responsive: [
                     {
                         breakpoint: 991,
