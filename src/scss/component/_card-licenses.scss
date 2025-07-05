@@ -1,0 +1,73 @@
+.card-licenses{
+  position: relative;
+  cursor: pointer;
+
+  &:hover{
+    .card-licenses__icons{
+      color: var(--brand-500);
+    }
+  }
+
+
+  // .card-licenses__images
+  &__images{
+    width: em(160);
+
+    position: relative;
+    aspect-ratio: 3 / 4;
+
+    @include media(sm){
+      width: auto;
+      height: em(200);
+    }
+
+    picture{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    img{
+      object-position: center;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .card-licenses__inner
+  &__inner{
+    flex: 1;
+  }
+
+  // .card-licenses__title
+  &__title{
+
+  }
+
+  // .card-licenses__text
+  &__text{
+
+  }
+
+  // .card-licenses__icons
+  &__icons{
+    transition: var(--animation);
+
+    @include media(sm){
+      display: none;
+    }
+  }
+
+
+  // .card-licenses__link
+  &__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+
+}

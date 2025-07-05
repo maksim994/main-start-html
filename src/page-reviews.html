@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+  "title": "Отзывы"
+})
+<body>
+
+@include('partials/component/header.html')
+
+<main class="main">
+  <div class="wrapper">
+
+    <div class="topic">
+      <div class="topic__heading">
+        <h1 id="pagetitle" class="switcher-title">Отзывы</h1>
+      </div>
+    </div>
+
+    <div class="wrapper-content">
+      <aside class="left_block d-lg-n">
+        <div class="aside-scroll-block">
+          <ul class="side-menu aside-block">
+            <li class="active opened">
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/" class="dark-link switcher-title top-level-link link--active link-with-flag" aria-current="page">Компания</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/history/" class="dark-link top-level-link  link-with-flag">История компании</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/vacancy/" class="dark-link top-level-link  link-with-flag">Вакансии</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/brands/" class="dark-link top-level-link  link-with-flag">Производители</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/licenses/" class="dark-link top-level-link  link-with-flag">Лицензии</a>
+                </span>
+            </li>
+
+            <li>
+                <span class="bg-opacity-theme-parent-hover link-wrapper fill-theme-parent-all">
+                    <a href="/company/requisites/" class="dark-link top-level-link  link-with-flag">Реквизиты</a>
+                </span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="right_block">
+          <div class="reviews-list__grid grid-list">
+              @include('partials/element/card-reviews.html', {
+                'date': '3 декабря 2020',
+                'post': 'Директор офисного центра Getred',
+                'name': 'Елена Шипрова',
+                'text': '<p>Заказывали в Allcorp3 систему безопасности для нашего центра. Заказ обработали быстро — уже на следующий день инженеры окружили меня и требовали разрешения начать работу. В течение дня установили видеонаблюдение и сигнализацию. Я думала, что это конец работ, но в течение следующей недели рабочие ежедневно приходили и проверяли работоспособность системы. Когда они убедились, что все работает исправно, предоставили сопроводительную документацию и акты. Я очень довольна работой Allcorp3 и буду сотрудничать с ними в будущем.</p> <p>В нашем танцевальном зале часто ломали оборудование и даже разбивали зеркала. Мы никак не могли найти нарушителей и были в отчаянии. </p>'
+              })
+
+              @include('partials/element/card-reviews-foto.html', {
+                  'date': '3 декабря 2020',
+                  'post': 'Директор офисного центра Getred',
+                  'name': 'Елена Шипрова',
+                  'text': '<p>Заказывали в Allcorp3 систему безопасности для нашего центра. Заказ обработали быстро — уже на следующий день инженеры окружили меня и требовали разрешения начать работу. В течение дня установили видеонаблюдение и сигнализацию. Я думала, что это конец работ, но в течение следующей недели рабочие ежедневно приходили и проверяли работоспособность системы. Когда они убедились, что все работает исправно, предоставили сопроводительную документацию и акты. Я очень довольна работой Allcorp3 и буду сотрудничать с ними в будущем.</p>'
+              })
+
+              @include('partials/element/card-reviews.html', {
+                  'date': '3 декабря 2020',
+                  'post': 'Директор офисного центра Getred',
+                  'name': 'Елена Шипрова',
+                  'text': '<p>Заказывали в Allcorp3 систему безопасности для нашего центра. Заказ обработали быстро — уже на следующий день инженеры окружили меня и требовали разрешения начать работу. В течение дня установили видеонаблюдение и сигнализацию. Я думала, что это конец работ, но в течение следующей недели рабочие ежедневно приходили и проверяли работоспособность системы. Когда они убедились, что все работает исправно, предоставили сопроводительную документацию и акты. Я очень довольна работой Allcorp3 и буду сотрудничать с ними в будущем.</p>'
+              })
+
+
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+@include('partials/component/footer.html')
+</body>
+</html>

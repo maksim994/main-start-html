@@ -1,0 +1,32 @@
+.card-reviews{
+
+
+  // .card-reviews__info
+  &__info{
+
+    // .card-reviews__info-item
+    &-item{
+      display: inline-block;
+      margin-right: em(16);
+    }
+
+  }
+}
+
+
+.rating{
+
+  // .rating__star
+  &__star{
+    color: #cccccc;
+    // .rating__star-svg--filled
+    &-svg--filled{
+      color: #ffb45b
+    }
+  }
+
+
+
+
+
+}

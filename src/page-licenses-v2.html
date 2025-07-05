@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "Лицензии и сертификаты"
+})
+
+<body>
+
+@include('partials/component/header.html')
+
+<main class="main">
+    <div class="wrapper">
+
+        <div class="topic">
+            <div class="topic__heading">
+                <h1 id="pagetitle" class="switcher-title">Лицензии и сертификаты</h1>
+            </div>
+        </div>
+
+        <div class="wrapper-content">
+            <aside class="left_block d-lg-n">
+                @include('partials/component/side-menu.html')
+            </aside>
+
+            <div class="right_block">
+                <div class="license-list-inner__section  d-f fd-c gap">
+                    <div class="license-list-inner__section-content d-f fd-c gap">
+                        <div class="license-list-inner__section-content-top  d-f fd-c gap-8">
+                            <div class="license-list-inner__section-title h3 m-0">Сертификаты</div>
+                            <div class="license-list-inner__section-description text-reset">
+                                <p>Сертификат соответствия — документ, подтверждающий соответствие продукции требованиям качества и безопасности, установленными для нее действующими стандартами и правилами.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid-list grid-list--items-3 grid-list-lg-items-2 grid-list-md-items-1 gap-8">
+                            @include('partials/element/card-licenses-v2.html')
+                            @include('partials/element/card-licenses-v2.html')
+                            @include('partials/element/card-licenses-v2.html')
+                            @include('partials/element/card-licenses-v2.html')
+                        </div>
+                    </div>
+
+                    <div class="license-list-inner__section-content d-f fd-c gap">
+                        <div class="license-list-inner__section-content-top  d-f fd-c gap-8">
+                            <div class="license-list-inner__section-title h3 m-0">Лицензии</div>
+                        </div>
+                        <div class="grid-list grid-list--items-2 grid-list-lg-items-2 grid-list-md-items-1 gap-8">
+                            @include('partials/element/card-licenses.html')
+                            @include('partials/element/card-licenses.html')
+                            @include('partials/element/card-licenses.html')
+                            @include('partials/element/card-licenses.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+@include('partials/component/footer.html')
+</body>
+
+</html>
