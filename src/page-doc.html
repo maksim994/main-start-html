@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "Лицензии и сертификаты"
+})
+
+<body>
+
+@include('partials/component/header.html')
+
+<main class="main">
+    <div class="wrapper">
+
+        <div class="topic">
+            <div class="topic__heading">
+                <h1 id="pagetitle" class="switcher-title">Лицензии и сертификаты</h1>
+            </div>
+        </div>
+
+        <div class="wrapper-content">
+            <aside class="left_block d-lg-n">
+                @include('partials/component/side-menu.html')
+            </aside>
+
+            <div class="right_block">
+
+                <div class="document-file-form mb-20">
+                    <form class="header-search-form d-f ai-c" action="#">
+                        <input type="search" name="q" value="" maxlength="50" class="header-search-input" placeholder="Введите название продукта">
+
+                        <span class="header-search-btn search-submit">
+                        <button type="submit" class="btn btn-primary" title="Найти">
+                            Найти
+                        </button>
+                    </span>
+                    </form>
+                </div>
+
+                <div class="document-file-list rounded-md">
+                    @include('partials/element/document-file.html')
+                    @include('partials/element/document-file.html')
+                    @include('partials/element/document-file.html')
+                    @include('partials/element/document-file.html')
+                    @include('partials/element/document-file.html')
+                    @include('partials/element/document-file.html')
+                    @include('partials/element/document-file.html')
+                    @include('partials/element/document-file.html')
+                    @include('partials/element/document-file.html')
+                </div>
+
+                @include('partials/base/pagination.html')
+
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+@include('partials/component/footer.html')
+</body>
+
+</html>

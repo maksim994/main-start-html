@@ -1,0 +1,26 @@
+.tizers{
+
+  &[data-position="left"]{
+    display: flex;
+    gap: em(18);
+
+    .tizers-inner{
+      flex: 1;
+    }
+  }
+
+  &[data-position="top"]{
+    .tizers-icons{
+      margin-bottom: em(8);
+    }
+  }
+
+
+  // .tizers-icons
+
+  // .tizers-inner
+
+  // .tizers-name
+
+  // .tizers-text
+}

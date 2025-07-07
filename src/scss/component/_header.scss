@@ -14,6 +14,13 @@
 
 @import "./header/header2";
 @import "./header/header3";
+@import "./header/header-mobile";
+
+@include media(lg){
+  .header{
+    display: none !important;
+  }
+}
 
 //.header{
 //

@@ -78,6 +78,11 @@ h5, .h5{
     }
   }
 
+  // .text-xl
+  &-xl{
+    font-size: em(20);
+  }
+
   // .text-lg
   &-lg{
     font-size: em(18);

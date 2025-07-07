@@ -1,0 +1,52 @@
+.document-file{
+
+  @include media(md){
+    flex-wrap: wrap;
+  }
+
+  &:hover{
+    background-color: var(--gray-5);
+  }
+
+  // .document-file-list
+  &-list{
+    overflow: hidden;
+
+    &:not(:last-child){
+      margin-bottom: -1px;
+    }
+  }
+
+  // .document-file-inner
+  &-inner{
+    flex: 1;
+  }
+
+  // .document-file-title
+  &-title{
+    @include media(md){
+      line-height: 1;
+    }
+  }
+
+  //
+  &-info{
+
+    @include media(md){
+      flex-basis: 100%;
+      padding-left: 34px;
+    }
+  }
+
+  // .document-file-icons
+  &-icons{
+
+    span{
+      font-size: 0;
+
+      @include media(md){
+        font-size: inherit;
+      }
+    }
+  }
+}
